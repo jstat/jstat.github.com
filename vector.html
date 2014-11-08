@@ -15,7 +15,7 @@
       </div>
       <hr />
     </header>
-	<div id="toc"><h2>Table Of Contents</h2><ul><li><a href="#vector_Functionality">Vector Functionality</a><ul><li><a href="#sum">sum()</a></li><li><a href="#sumsqrd">sumsqrd()</a></li><li><a href="#sumsqerr">sumsqerr()</a></li><li><a href="#product">product()</a></li><li><a href="#min">min()</a></li><li><a href="#max">max()</a></li><li><a href="#mean">mean()</a></li><li><a href="#meansqerr">meansqerr()</a></li><li><a href="#geomean">geomean()</a></li><li><a href="#median">median()</a></li><li><a href="#cumsum">cumsum()</a></li><li><a href="#diff">diff()</a></li><li><a href="#mode">mode()</a></li><li><a href="#range">range()</a></li><li><a href="#variance">variance()</a></li><li><a href="#stdev">stdev()</a></li><li><a href="#meandev">meandev()</a></li><li><a href="#meddev">meddev()</a></li><li><a href="#coeffvar">coeffvar()</a></li><li><a href="#quartiles">quartiles()</a></li><li><a href="#covariance">covariance()</a></li><li><a href="#corrcoeff">corrcoeff()</a></li></ul></li></ul><hr /></div>
+	<div id="toc"><h2>Table Of Contents</h2><ul><li><a href="#vector_Functionality">Vector Functionality</a><ul><li><a href="#sum">sum()</a></li><li><a href="#sumsqrd">sumsqrd()</a></li><li><a href="#sumsqerr">sumsqerr()</a></li><li><a href="#product">product()</a></li><li><a href="#min">min()</a></li><li><a href="#max">max()</a></li><li><a href="#mean">mean()</a></li><li><a href="#meansqerr">meansqerr()</a></li><li><a href="#geomean">geomean()</a></li><li><a href="#median">median()</a></li><li><a href="#cumsum">cumsum()</a></li><li><a href="#diff">diff()</a></li><li><a href="#mode">mode()</a></li><li><a href="#range">range()</a></li><li><a href="#variance">variance()</a></li><li><a href="#stdev">stdev()</a></li><li><a href="#meandev">meandev()</a></li><li><a href="#meddev">meddev()</a></li><li><a href="#coeffvar">coeffvar()</a></li><li><a href="#quartiles">quartiles()</a></li><li><a href="#quantiles">quantiles()</a></li><li><a href="#percentileOfScore">percentileOfScore()</a></li><li><a href="#covariance">covariance()</a></li><li><a href="#corrcoeff">corrcoeff()</a></li></ul></li></ul><hr /></div>
 <h2 id="vector_Functionality">Vector Functionality</h2>
 
 <h3 id="sum">sum()</h3>
@@ -459,7 +459,8 @@ jStat([[1,2],[3,4]]).range() === [2,2]</code></pre>
 <p><strong>variance( array[,flag])</strong></p>
 
 <p>Return the variance of a vector.
-Flag indicates whether to compute population or sample.</p>
+By default, the sample variance is calculated.
+Passing true as the flag indicates computes the population variance instead.</p>
 
 <pre><code>jStat.variance([1,2,3,4]) === 1.25
 jStat.variance([1,2,3,4],true) === 1.66666...</code></pre>
@@ -495,7 +496,11 @@ jStat([[1,2],[3,4]]).variance() === [1,1]</code></pre>
 <p><strong>stdev( array[,flag])</strong></p>
 
 <p>Return the standard deviation of a vector.
-Flag indicates whether to compute population or sample.</p>
+By defaut, the sample standard deviation is returned.
+Passing true for the flag parameter returns the population standard deviation.</p>
+
+<p>The &#39;sample&#39; standard deviation is also called the &#39;corrected standard deviation&#39;, and is an unbiased estimator of the population standard deviation.
+The population standard deviation is also the &#39;uncorrected standard deviation&#39;, and is a biased but minimum-mean-squared-error estimator.</p>
 
 <pre><code>jStat.stdev([1,2,3,4]) === 1.118...
 jStat.stdev([1,2,3,4],true) === 1.290...</code></pre>
@@ -646,6 +651,30 @@ jStat(1,100,100,function( x ) {
     // result === [25,50,75]
 });</code></pre>
 
+<h3 id="quantiles">quantiles()</h3>
+
+<p><strong>quantiles( dataArray, quantilesArray, [alphap[, betap]] )</strong></p>
+
+<p>Like quartiles, but calculate and return arbitrary quantiles of a vector
+or matrix (column-by-column).</p>
+
+<pre><code>jStat.quantiles([1, 2, 3, 4, 5, 6],
+                [0.25, 0.5, 0.75]) === [1.9375, 3.5, 5.0625]</code></pre>
+
+<p>Optional parameters alphap and betap govern the quantile estimation method.
+For more details see the Wikipedia page on quantiles or scipy.stats.mstats.mquantiles
+documentation.</p>
+
+<h3 id="percentileOfScore">percentileOfScore()</h3>
+
+<p><strong>percentileOfScore( dataArray, score[, kind] )</strong></p>
+
+<p>The percentile rank of score in a given array. Returns the percentage
+of all values in the input array that are less than (if <code>kind == &#39;strict&#39;</code>) or
+less or equal than (if <code>kind == &#39;weak&#39;</code>) score. Default is <code>&#39;weak&#39;</code>.</p>
+
+<pre><code> jStat.percentileOfScore([1, 2, 3, 4, 5, 6], 3), 0.5, &#39;weak&#39;) === 0.5;</code></pre>
+
 <h3 id="covariance">covariance()</h3>
 
 <p><strong>covariance( array, array )</strong></p>
@@ -659,7 +688,7 @@ jStat.covariance( seq, seq ) === 11;</code></pre>
 
 <p><strong>corrcoeff( array, array )</strong></p>
 
-<p>Return the correlation coefficient of two vectors.</p>
+<p>Return the population correlation coefficient of two vectors (Pearson&#39;s Rho).</p>
 
 <pre><code>var seq = jStat.seq( 0, 10, 11 );
 jStat.corrcoeff( seq, seq ) === 1;</code></pre>

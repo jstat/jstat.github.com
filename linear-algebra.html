@@ -62,11 +62,13 @@
 
 <h3 id="norm">norm()</h3>
 
-<p>Compulte the norm of a vector.</p>
+<p>Compulte the norm of a vector. Note that if a matrix is passed, then the
+first row of the matrix will be used as a vector for norm().</p>
 
 <h3 id="angle">angle( arg )</h3>
 
-<p>Compute the angle between two vectors.</p>
+<p>Compute the angle between two vectors. Note that if a matrix is passed, then
+the first row of the matrix will be used as the vector for angle().</p>
 
 <h2 id="static_Functionality">Static Functionality</h2>
 
@@ -108,7 +110,8 @@
 
 <h3 id="aug">aug(A,B)</h3>
 
-<p>Augments matrix A by matrix B</p>
+<p>Augments matrix A by matrix B. Note that this method returns a plain matrix,
+not a jStat object.</p>
 
 <h3 id="det">det(A)</h3>
 
@@ -136,7 +139,7 @@
 
 <h3 id="gauss_jacobi">gauss_jacobi(A,b,x,r)</h3>
 
-<p>Solves the linear system Ax = b using the Gauss-Jacobi method with an initial guess of r. </p>
+<p>Solves the linear system Ax = b using the Gauss-Jacobi method with an initial guess of r.</p>
 
 <h3 id="gauss_seidel">gauss_seidel(A,b,x,r)</h3>
 
