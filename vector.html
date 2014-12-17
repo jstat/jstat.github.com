@@ -15,7 +15,7 @@
       </div>
       <hr />
     </header>
-	<div id="toc"><h2>Table Of Contents</h2><ul><li><a href="#vector_Functionality">Vector Functionality</a><ul><li><a href="#sum">sum()</a></li><li><a href="#sumsqrd">sumsqrd()</a></li><li><a href="#sumsqerr">sumsqerr()</a></li><li><a href="#product">product()</a></li><li><a href="#min">min()</a></li><li><a href="#max">max()</a></li><li><a href="#mean">mean()</a></li><li><a href="#meansqerr">meansqerr()</a></li><li><a href="#geomean">geomean()</a></li><li><a href="#median">median()</a></li><li><a href="#cumsum">cumsum()</a></li><li><a href="#diff">diff()</a></li><li><a href="#mode">mode()</a></li><li><a href="#range">range()</a></li><li><a href="#variance">variance()</a></li><li><a href="#stdev">stdev()</a></li><li><a href="#meandev">meandev()</a></li><li><a href="#meddev">meddev()</a></li><li><a href="#coeffvar">coeffvar()</a></li><li><a href="#quartiles">quartiles()</a></li><li><a href="#quantiles">quantiles()</a></li><li><a href="#percentileOfScore">percentileOfScore()</a></li><li><a href="#covariance">covariance()</a></li><li><a href="#corrcoeff">corrcoeff()</a></li></ul></li></ul><hr /></div>
+	<div id="toc"><h2>Table Of Contents</h2><ul><li><a href="#vector_Functionality">Vector Functionality</a><ul><li><a href="#sum">sum()</a></li><li><a href="#sumsqrd">sumsqrd()</a></li><li><a href="#sumsqerr">sumsqerr()</a></li><li><a href="#product">product()</a></li><li><a href="#min">min()</a></li><li><a href="#max">max()</a></li><li><a href="#mean">mean()</a></li><li><a href="#meansqerr">meansqerr()</a></li><li><a href="#geomean">geomean()</a></li><li><a href="#median">median()</a></li><li><a href="#cumsum">cumsum()</a></li><li><a href="#cumprod">cumprod()</a></li><li><a href="#diff">diff()</a></li><li><a href="#mode">mode()</a></li><li><a href="#range">range()</a></li><li><a href="#variance">variance()</a></li><li><a href="#stdev">stdev()</a></li><li><a href="#meandev">meandev()</a></li><li><a href="#meddev">meddev()</a></li><li><a href="#skewness">skewness()</a></li><li><a href="#kurtosis">kurtosis()</a></li><li><a href="#coeffvar">coeffvar()</a></li><li><a href="#quartiles">quartiles()</a></li><li><a href="#quantiles">quantiles()</a></li><li><a href="#percentileOfScore">percentileOfScore()</a></li><li><a href="#histogram">histogram()</a></li><li><a href="#covariance">covariance()</a></li><li><a href="#corrcoeff">corrcoeff()</a></li></ul></li></ul><hr /></div>
 <h2 id="vector_Functionality">Vector Functionality</h2>
 
 <h3 id="sum">sum()</h3>
@@ -359,6 +359,37 @@ jStat([[1,2],[3,4]]).cumsum() === [[1,4],[2,6]]</code></pre>
     // result === ...
 });</code></pre>
 
+<h3 id="cumprod">cumprod()</h3>
+
+<p><strong>cumprod( array )</strong></p>
+
+<p>Return an array of partial products in the sequence.</p>
+
+<pre><code>jStat.cumprod([2,3,4]) === [2,6,24]</code></pre>
+
+<p><strong>fn.cumprod( [bool][,callback] )</strong></p>
+
+<p>Return an array of partial products for a vector or matrix columns.</p>
+
+<pre><code>jStat( 1, 5, 5 ).cumprod() === [1,2,6,24,120]
+jStat([[1,2],[3,4]]).cumprod() === [[1,3],[2,8]]</code></pre>
+
+<p>If callback is passed then will pass result as first argument.</p>
+
+<pre><code>jStat( 1, 5, 5 ).cumprod(function( result ) {
+    // result === [1,2,6,24,120]
+});</code></pre>
+
+<p>If pass boolean true as first argument, then return cumulative products of the matrix.</p>
+
+<pre><code>jStat([[1,2],[3,4]]).cumprod( true ) === [[1,2],[3,12]]</code></pre>
+
+<p>And the two can be combined.</p>
+
+<pre><code>jStat([[1,2],[3,4]]).cumprod(true,function( result ) {
+    // result === ...
+});</code></pre>
+
 <h3 id="diff">diff()</h3>
 
 <p><strong>diff( array )</strong></p>
@@ -593,9 +624,25 @@ jStat([[1,2],[3,4]]).meddev() === [1,1]</code></pre>
 
 <p>And the two can be combined.</p>
 
-<pre><code>jStat[[1,2],[3,5]]).meddev(true,function( result ) {
+<pre><code>jStat([[1,2],[3,5]]).meddev(true,function( result ) {
     // result === 0.25
 });</code></pre>
+
+<h3 id="skewness">skewness()</h3>
+
+<p><strong>skewness( array )</strong></p>
+
+<p>Return the skewness of a vector (third standardized moment).</p>
+
+<pre><code>jStat.skewness([1,2,2,3,5]) === 0.75003...</code></pre>
+
+<h3 id="kurtosis">kurtosis()</h3>
+
+<p><strong>kurtosis( array )</strong></p>
+
+<p>Return the excess kurtosis of a vector (fourth standardized moment - 3).</p>
+
+<pre><code>jStat.kurtosis([1,2,3,4]) === -0.63610...</code></pre>
 
 <h3 id="coeffvar">coeffvar()</h3>
 
@@ -674,6 +721,16 @@ of all values in the input array that are less than (if <code>kind == &#39;stric
 less or equal than (if <code>kind == &#39;weak&#39;</code>) score. Default is <code>&#39;weak&#39;</code>.</p>
 
 <pre><code> jStat.percentileOfScore([1, 2, 3, 4, 5, 6], 3), 0.5, &#39;weak&#39;) === 0.5;</code></pre>
+
+<h3 id="histogram">histogram()</h3>
+
+<p><strong>histogram( dataArray, [numBins] )</strong></p>
+
+<p>The histogram data defined as the number of dataArray elements found in 
+equally sized bins across the range of dataArray. Default number
+of bins is 4.</p>
+
+<pre><code> jStat.histogram([100, 101, 102, 230, 304, 305, 400], 3) === [3, 1, 3];</code></pre>
 
 <h3 id="covariance">covariance()</h3>
 

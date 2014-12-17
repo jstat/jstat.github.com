@@ -15,7 +15,7 @@
       </div>
       <hr />
     </header>
-	<div id="toc"><h2>Table Of Contents</h2><ul><li><a href="#linear_Algebra">Linear Algebra</a></li><li><a href="#instance_Functionality">Instance Functionality</a><ul><li><a href="#add">add( arg )</a></li><li><a href="#subtract">subtract( arg )</a></li><li><a href="#divide">divide( arg )</a></li><li><a href="#multiply">multiply( arg )</a></li><li><a href="#dot">dot( arg )</a></li><li><a href="#pow">pow( arg )</a></li><li><a href="#abs">abs()</a></li><li><a href="#norm">norm()</a></li><li><a href="#angle">angle( arg )</a></li></ul></li><li><a href="#static_Functionality">Static Functionality</a><ul><li><a href="#add">add( arr, arg )</a></li><li><a href="#subtract">subtract( arr, arg )</a></li><li><a href="#divide">divide( arr, arg )</a></li><li><a href="#multiply">multiply( arr, arg )</a></li><li><a href="#dot">dot( arr1, arr2 )</a></li><li><a href="#pow">pow( arr, arg )</a></li><li><a href="#abs">abs(arr)</a></li><li><a href="#norm">norm(arr)</a></li><li><a href="#angle">angle( arr1, arr2 )</a></li><li><a href="#aug">aug(A,B)</a></li><li><a href="#det">det(A)</a></li><li><a href="#inv">inv(A)</a></li><li><a href="#gauss_elimination">gauss_elimination(A,B)</a></li><li><a href="#gauss_jordan">gauss_jordan(A,B)</a></li><li><a href="#lu">lu(A,B)</a></li><li><a href="#cholesky">cholesky(A)</a></li><li><a href="#gauss_jacobi">gauss_jacobi(A,b,x,r)</a></li><li><a href="#gauss_seidel">gauss_seidel(A,b,x,r)</a></li><li><a href="#sOR">SOR(A,b,x,r,w)</a></li><li><a href="#householder">householder(A)</a></li><li><a href="#qR">QR()</a></li><li><a href="#jacobi">jacobi()</a></li><li><a href="#rungekutta">rungekutta()</a></li><li><a href="#romberg">romberg()</a></li><li><a href="#richardson">richardson()</a></li><li><a href="#simpson">simpson()</a></li><li><a href="#hermite">hermite()</a></li><li><a href="#lagrange">lagrange()</a></li><li><a href="#cubic_spline">cubic_spline()</a></li><li><a href="#gauss_quadrature">gauss_quadrature()</a></li><li><a href="#pCA">PCA()</a></li></ul></li></ul><hr /></div>
+	<div id="toc"><h2>Table Of Contents</h2><ul><li><a href="#linear_Algebra">Linear Algebra</a></li><li><a href="#instance_Functionality">Instance Functionality</a><ul><li><a href="#add">add( arg )</a></li><li><a href="#subtract">subtract( arg )</a></li><li><a href="#divide">divide( arg )</a></li><li><a href="#multiply">multiply( arg )</a></li><li><a href="#dot">dot( arg )</a></li><li><a href="#pow">pow( arg )</a></li><li><a href="#exp">exp()</a></li><li><a href="#log">log()</a></li><li><a href="#abs">abs()</a></li><li><a href="#norm">norm()</a></li><li><a href="#angle">angle( arg )</a></li></ul></li><li><a href="#static_Functionality">Static Functionality</a><ul><li><a href="#add">add( arr, arg )</a></li><li><a href="#subtract">subtract( arr, arg )</a></li><li><a href="#divide">divide( arr, arg )</a></li><li><a href="#multiply">multiply( arr, arg )</a></li><li><a href="#dot">dot( arr1, arr2 )</a></li><li><a href="#pow">pow( arr, arg )</a></li><li><a href="#exp">exp(arr)</a></li><li><a href="#log">log(arr)</a></li><li><a href="#abs">abs(arr)</a></li><li><a href="#norm">norm(arr)</a></li><li><a href="#angle">angle( arr1, arr2 )</a></li><li><a href="#aug">aug(A,B)</a></li><li><a href="#det">det(A)</a></li><li><a href="#inv">inv(A)</a></li><li><a href="#gauss_elimination">gauss_elimination(A,B)</a></li><li><a href="#gauss_jordan">gauss_jordan(A,B)</a></li><li><a href="#lu">lu(A,B)</a></li><li><a href="#cholesky">cholesky(A)</a></li><li><a href="#gauss_jacobi">gauss_jacobi(A,b,x,r)</a></li><li><a href="#gauss_seidel">gauss_seidel(A,b,x,r)</a></li><li><a href="#sOR">SOR(A,b,x,r,w)</a></li><li><a href="#householder">householder(A)</a></li><li><a href="#qR">QR()</a></li><li><a href="#jacobi">jacobi()</a></li><li><a href="#rungekutta">rungekutta()</a></li><li><a href="#romberg">romberg()</a></li><li><a href="#richardson">richardson()</a></li><li><a href="#simpson">simpson()</a></li><li><a href="#hermite">hermite()</a></li><li><a href="#lagrange">lagrange()</a></li><li><a href="#cubic_spline">cubic_spline()</a></li><li><a href="#gauss_quadrature">gauss_quadrature()</a></li><li><a href="#pCA">PCA()</a></li></ul></li></ul><hr /></div>
 <h2 id="linear_Algebra">Linear Algebra</h2>
 
 <h2 id="instance_Functionality">Instance Functionality</h2>
@@ -53,6 +53,18 @@
 <p>Raise all entries by value.</p>
 
 <pre><code>jStat([[1,2,3]]).pow( 2 ) === [[1,4,9]];</code></pre>
+
+<h3 id="exp">exp()</h3>
+
+<p>Exponentiate all entries.</p>
+
+<pre><code>jStat([[0,1]]).exp() === [[1, 2.718281828459045]]</code></pre>
+
+<h3 id="log">log()</h3>
+
+<p>Return the natural logarithm of all entries.</p>
+
+<pre><code>jStat([[1, 2.718281828459045]]).log() === [[0,1]];</code></pre>
 
 <h3 id="abs">abs()</h3>
 
@@ -95,6 +107,14 @@ the first row of the matrix will be used as the vector for angle().</p>
 <h3 id="pow">pow( arr, arg )</h3>
 
 <p>Raise all entries of the array to the power of arg</p>
+
+<h3 id="exp">exp(arr)</h3>
+
+<p>Exponentiate all entries in the array</p>
+
+<h3 id="log">log(arr)</h3>
+
+<p>Return the natural logarithm of all entries in the array</p>
 
 <h3 id="abs">abs(arr)</h3>
 
