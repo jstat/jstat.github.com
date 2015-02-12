@@ -45,7 +45,7 @@ jStat([[1,2],[3,4]]).sum() === [ 4, 6 ]</code></pre>
 
 <p>And the two can be combined.</p>
 
-<pre><code>jStat[[1,2],[3,4]]).sum(true,function( result ) {
+<pre><code>jStat([[1,2],[3,4]]).sum(true,function( result ) {
     // result === 10
 });</code></pre>
 
@@ -76,7 +76,7 @@ jStat([[1,2],[3,4]]).sumsqrd() === [ 10, 20 ]</code></pre>
 
 <p>And the two can be combined.</p>
 
-<pre><code>jStat[[1,2],[3,4]]).sumsqrd(true,function( result ) {
+<pre><code>jStat([[1,2],[3,4]]).sumsqrd(true,function( result ) {
     // result === 650
 });</code></pre>
 
@@ -107,7 +107,7 @@ jStat([[1,2],[3,4]]).sumsqerr() === [ 2, 2 ]</code></pre>
 
 <p>And the two can be combined.</p>
 
-<pre><code>jStat[[1,2],[3,4]]).sumsqerr(true,function( result ) {
+<pre><code>jStat([[1,2],[3,4]]).sumsqerr(true,function( result ) {
     // result === 0
 });</code></pre>
 
@@ -138,7 +138,7 @@ jStat([[1,2],[3,4]]).product() === [ 3, 8 ]</code></pre>
 
 <p>And the two can be combined.</p>
 
-<pre><code>jStat[[1,2],[3,4]]).product(true,function( result ) {
+<pre><code>jStat([[1,2],[3,4]]).product(true,function( result ) {
     // result === 24
 });</code></pre>
 
@@ -169,7 +169,7 @@ jStat([[1,2],[3,4]]).min() === [ 1, 2 ]</code></pre>
 
 <p>And the two can be combined.</p>
 
-<pre><code>jStat[[1,2],[3,4]]).min(true,function( result ) {
+<pre><code>jStat([[1,2],[3,4]]).min(true,function( result ) {
     // result === 1
 });</code></pre>
 
@@ -200,7 +200,7 @@ jStat([[1,2],[3,4]]).max() === [ 3, 4 ]</code></pre>
 
 <p>And the two can be combined.</p>
 
-<pre><code>jStat[[1,2],[3,4]]).max(true,function( result ) {
+<pre><code>jStat([[1,2],[3,4]]).max(true,function( result ) {
     // result === 4
 });</code></pre>
 
@@ -231,7 +231,7 @@ jStat([[1,2],[3,4]]).mean() === [ 2, 3 ]</code></pre>
 
 <p>And the two can be combined.</p>
 
-<pre><code>jStat[[1,2],[3,4]]).mean(true,function( result ) {
+<pre><code>jStat([[1,2],[3,4]]).mean(true,function( result ) {
     // result === 2.5
 });</code></pre>
 
@@ -262,7 +262,7 @@ jStat([[1,2],[3,4]]).meansqerr() === [ 1, 1 ]</code></pre>
 
 <p>And the two can be combined.</p>
 
-<pre><code>jStat[[1,2],[3,4]]).meansqerr(true,function( result ) {
+<pre><code>jStat([[1,2],[3,4]]).meansqerr(true,function( result ) {
     // result === 0
 });</code></pre>
 
@@ -293,7 +293,7 @@ jStat([[1,2],[3,4]]).geomean() === [ 1.732..., 2.828... ]</code></pre>
 
 <p>And the two can be combined.</p>
 
-<pre><code>jStat[[1,2],[3,4]]).geomean(true,function( result ) {
+<pre><code>jStat([[1,2],[3,4]]).geomean(true,function( result ) {
     // result === 2.213...
 });</code></pre>
 
@@ -324,7 +324,7 @@ jStat([[1,2],[3,4]]).median() === [ 2, 3 ]</code></pre>
 
 <p>And the two can be combined.</p>
 
-<pre><code>jStat[[1,2],[3,4]]).median(true,function( result ) {
+<pre><code>jStat([[1,2],[3,4]]).median(true,function( result ) {
     // result === 2.5
 });</code></pre>
 
@@ -450,7 +450,7 @@ jStat([[1,2],[3,4],[1,4]]).mode() === [1,4]</code></pre>
 
 <p>And the two can be combined.</p>
 
-<pre><code>jStat[[1,2],[1,2]]).mode(true,function( result ) {
+<pre><code>jStat([[1,2],[1,2]]).mode(true,function( result ) {
     // result === false
 });</code></pre>
 
@@ -481,7 +481,7 @@ jStat([[1,2],[3,4]]).range() === [2,2]</code></pre>
 
 <p>And the two can be combined.</p>
 
-<pre><code>jStat[[1,2],[3,5]]).range(true,function( result ) {
+<pre><code>jStat([[1,2],[3,5]]).range(true,function( result ) {
     // result === 1
 });</code></pre>
 
@@ -490,8 +490,8 @@ jStat([[1,2],[3,4]]).range() === [2,2]</code></pre>
 <p><strong>variance( array[,flag])</strong></p>
 
 <p>Return the variance of a vector.
-By default, the sample variance is calculated.
-Passing true as the flag indicates computes the population variance instead.</p>
+By default, the population variance is calculated.
+Passing true as the flag indicates computes the sample variance instead.</p>
 
 <pre><code>jStat.variance([1,2,3,4]) === 1.25
 jStat.variance([1,2,3,4],true) === 1.66666...</code></pre>
@@ -518,7 +518,7 @@ jStat([[1,2],[3,4]]).variance() === [1,1]</code></pre>
 
 <p>And the two can be combined.</p>
 
-<pre><code>jStat[[1,2],[3,5]]).variance(true,function( result ) {
+<pre><code>jStat([[1,2],[3,5]]).variance(true,function( result ) {
     // result === 0.140625
 });</code></pre>
 
@@ -527,8 +527,8 @@ jStat([[1,2],[3,4]]).variance() === [1,1]</code></pre>
 <p><strong>stdev( array[,flag])</strong></p>
 
 <p>Return the standard deviation of a vector.
-By defaut, the sample standard deviation is returned.
-Passing true for the flag parameter returns the population standard deviation.</p>
+By defaut, the population standard deviation is returned.
+Passing true for the flag parameter returns the sample standard deviation.</p>
 
 <p>The &#39;sample&#39; standard deviation is also called the &#39;corrected standard deviation&#39;, and is an unbiased estimator of the population standard deviation.
 The population standard deviation is also the &#39;uncorrected standard deviation&#39;, and is a biased but minimum-mean-squared-error estimator.</p>
@@ -562,7 +562,7 @@ jStat( 1, 4, 4 ).stdev(true,function( result ) {
 
 <p>And the two can be combined.</p>
 
-<pre><code>jStat[[1,2],[3,5]]).stdev(true,function( result ) {
+<pre><code>jStat([[1,2],[3,5]]).stdev(true,function( result ) {
     // result === 0.25
 });</code></pre>
 
@@ -593,7 +593,7 @@ jStat([[1,2],[3,4]]).meandev() === [1,1]</code></pre>
 
 <p>And the two can be combined.</p>
 
-<pre><code>jStat[[1,2],[3,5]]).meandev(true,function( result ) {
+<pre><code>jStat([[1,2],[3,5]]).meandev(true,function( result ) {
     // result === 0.25
 });</code></pre>
 
@@ -671,7 +671,7 @@ jStat([[1,2],[3,4]]).coeffvar() === [0.5,0.333...]</code></pre>
 
 <p>And the two can be combined.</p>
 
-<pre><code>jStat[[1,2],[3,5]]).coeffvar(true,function( result ) {
+<pre><code>jStat([[1,2],[3,5]]).coeffvar(true,function( result ) {
     // result === 0.142...
 });</code></pre>
 
@@ -726,7 +726,7 @@ less or equal than (if <code>kind == &#39;weak&#39;</code>) score. Default is <c
 
 <p><strong>histogram( dataArray, [numBins] )</strong></p>
 
-<p>The histogram data defined as the number of dataArray elements found in 
+<p>The histogram data defined as the number of dataArray elements found in
 equally sized bins across the range of dataArray. Default number
 of bins is 4.</p>
 

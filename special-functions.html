@@ -15,7 +15,7 @@
       </div>
       <hr />
     </header>
-	<div id="toc"><h2>Table Of Contents</h2><ul><li><a href="#special_Functions">Special Functions</a><ul><li><a href="#betafn">betafn( x, y )</a></li><li><a href="#betaln">betaln( x, y )</a></li><li><a href="#betacf">betacf( x, a, b )</a></li><li><a href="#ibetainv">ibetainv( p, a, b)</a></li><li><a href="#ibeta">ibeta( x, a, b)</a></li><li><a href="#gammaln">gammaln( x )</a></li><li><a href="#gammafn">gammafn( x )</a></li><li><a href="#gammap">gammap( a, x )</a></li><li><a href="#factorialln">factorialln( n )</a></li><li><a href="#factorial">factorial( n )</a></li><li><a href="#combination">combination( n, m )</a></li><li><a href="#permutation">permutation( n, m )</a></li><li><a href="#gammapinv">gammapinv( p, a )</a></li><li><a href="#erf">erf( x )</a></li><li><a href="#erfc">erfc( x )</a></li><li><a href="#erfcinv">erfcinv( p )</a></li><li><a href="#randn">randn( n, m )</a></li><li><a href="#randg">randg( shape, n, m )</a></li></ul></li></ul><hr /></div>
+	<div id="toc"><h2>Table Of Contents</h2><ul><li><a href="#special_Functions">Special Functions</a><ul><li><a href="#betafn">betafn( x, y )</a></li><li><a href="#betaln">betaln( x, y )</a></li><li><a href="#betacf">betacf( x, a, b )</a></li><li><a href="#ibetainv">ibetainv( p, a, b)</a></li><li><a href="#ibeta">ibeta( x, a, b)</a></li><li><a href="#gammafn">gammafn( x )</a></li><li><a href="#gammaln">gammaln( x )</a></li><li><a href="#gammap">gammap( a, x )</a></li><li><a href="#lowRegGamma">lowRegGamma(a, x)</a></li><li><a href="#gammapinv">gammapinv( p, a )</a></li><li><a href="#factorialln">factorialln( n )</a></li><li><a href="#factorial">factorial( n )</a></li><li><a href="#combination">combination( n, m )</a></li><li><a href="#permutation">permutation( n, m )</a></li><li><a href="#erf">erf( x )</a></li><li><a href="#erfc">erfc( x )</a></li><li><a href="#erfcinv">erfcinv( p )</a></li><li><a href="#randn">randn( n, m )</a></li><li><a href="#randg">randg( shape, n, m )</a></li></ul></li></ul><hr /></div>
 <h2 id="special_Functions">Special Functions</h2>
 
 <h3 id="betafn">betafn( x, y )</h3>
@@ -36,19 +36,38 @@
 
 <h3 id="ibeta">ibeta( x, a, b)</h3>
 
-<p>Returns teh incomplete Beta function evaluated at (x,a,b).</p>
+<p>Returns the incomplete Beta function evaluated at (x,a,b).</p>
+
+<h3 id="gammafn">gammafn( x )</h3>
+
+<p>Returns the Gamma function evaluated at x. This is sometimes called the &#39;complete&#39; gamma function.</p>
+
+<p>This function is tested against Mathematica&#39;s Gamma[x].</p>
 
 <h3 id="gammaln">gammaln( x )</h3>
 
 <p>Returns the Log-Gamma function evaluated at x.</p>
 
-<h3 id="gammafn">gammafn( x )</h3>
-
-<p>Returns the Gamma function evaluated at x.</p>
-
 <h3 id="gammap">gammap( a, x )</h3>
 
-<p>Returns the Lower Incomplete Gamma function evaluated at (a,x).</p>
+<p>Returns the lower incomplete gamma function evaluated at (a,x).
+This function is usually written with a lower case greek gamma character, and is one of the two <a href="http://mathworld.wolfram.com/IncompleteGammaFunction.html">incomplete gamma functions</a>.</p>
+
+<p>This function is tested against Mathematica&#39;s Gamma[a, 0, x].
+It is additionally tested against gammainc(a,x)&#39;s &#39;lowinc&#39; output from teh &#39;pracma&#39; library for R.</p>
+
+<h3 id="lowRegGamma">lowRegGamma(a, x)</h3>
+
+<p>Returns the lower regularized incomplete gamma function evaluated at (a,x).
+It is defined as the quotient of the lower incomplete gamma function evaluated at (a, x) and the upper incomplete gamma function (&#39;the gamma function&#39;) evaluated at (a).
+This function is usually written as P(x, a); and is one of the two <a href="http://mathworld.wolfram.com/RegularizedGammaFunction.html">regularized gamma functions</a>.</p>
+
+<p>This function is tested against gammainc(x, a)&#39;s &#39;reginc&#39; output from the &#39;pracma&#39; library for R. Note that R and jStat switch the order of operators for this function.</p>
+
+<h3 id="gammapinv">gammapinv( p, a )</h3>
+
+<p>Returns the inverse of the lower regularized incomplete Gamma function evaluated at (p,a).
+This function is the inverse of lowerRegularizedGamma(x, a).</p>
 
 <h3 id="factorialln">factorialln( n )</h3>
 
@@ -66,13 +85,9 @@
 
 <p>Returns the number of permutations of n, m.</p>
 
-<h3 id="gammapinv">gammapinv( p, a )</h3>
-
-<p>Returns the inverse of the incomplete Gamma function evaluated at (p,a).</p>
-
 <h3 id="erf">erf( x )</h3>
 
-<p>Returns the error function evaluated at x. </p>
+<p>Returns the error function evaluated at x.</p>
 
 <h3 id="erfc">erfc( x )</h3>
 
