@@ -15,7 +15,7 @@
       </div>
       <hr />
     </header>
-	<div id="toc"><h2>Table Of Contents</h2><ul><li><a href="#vector_Functionality">Vector Functionality</a><ul><li><a href="#sum">sum()</a></li><li><a href="#sumsqrd">sumsqrd()</a></li><li><a href="#sumsqerr">sumsqerr()</a></li><li><a href="#product">product()</a></li><li><a href="#min">min()</a></li><li><a href="#max">max()</a></li><li><a href="#mean">mean()</a></li><li><a href="#meansqerr">meansqerr()</a></li><li><a href="#geomean">geomean()</a></li><li><a href="#median">median()</a></li><li><a href="#cumsum">cumsum()</a></li><li><a href="#cumprod">cumprod()</a></li><li><a href="#diff">diff()</a></li><li><a href="#mode">mode()</a></li><li><a href="#range">range()</a></li><li><a href="#variance">variance()</a></li><li><a href="#stdev">stdev()</a></li><li><a href="#meandev">meandev()</a></li><li><a href="#meddev">meddev()</a></li><li><a href="#skewness">skewness()</a></li><li><a href="#kurtosis">kurtosis()</a></li><li><a href="#coeffvar">coeffvar()</a></li><li><a href="#quartiles">quartiles()</a></li><li><a href="#quantiles">quantiles()</a></li><li><a href="#percentileOfScore">percentileOfScore()</a></li><li><a href="#histogram">histogram()</a></li><li><a href="#covariance">covariance()</a></li><li><a href="#corrcoeff">corrcoeff()</a></li></ul></li></ul><hr /></div>
+	<div id="toc"><h2>Table Of Contents</h2><ul><li><a href="#vector_Functionality">Vector Functionality</a><ul><li><a href="#sum">sum()</a></li><li><a href="#sumsqrd">sumsqrd()</a></li><li><a href="#sumsqerr">sumsqerr()</a></li><li><a href="#sumrow">sumrow()</a></li><li><a href="#product">product()</a></li><li><a href="#min">min()</a></li><li><a href="#max">max()</a></li><li><a href="#mean">mean()</a></li><li><a href="#meansqerr">meansqerr()</a></li><li><a href="#geomean">geomean()</a></li><li><a href="#median">median()</a></li><li><a href="#cumsum">cumsum()</a></li><li><a href="#cumprod">cumprod()</a></li><li><a href="#diff">diff()</a></li><li><a href="#mode">mode()</a></li><li><a href="#range">range()</a></li><li><a href="#variance">variance()</a></li><li><a href="#stdev">stdev()</a></li><li><a href="#meandev">meandev()</a></li><li><a href="#meddev">meddev()</a></li><li><a href="#skewness">skewness()</a></li><li><a href="#kurtosis">kurtosis()</a></li><li><a href="#coeffvar">coeffvar()</a></li><li><a href="#quartiles">quartiles()</a></li><li><a href="#quantiles">quantiles()</a></li><li><a href="#percentile">percentile()</a></li><li><a href="#percentileOfScore">percentileOfScore()</a></li><li><a href="#histogram">histogram()</a></li><li><a href="#covariance">covariance()</a></li><li><a href="#corrcoeff">corrcoeff()</a></li></ul></li></ul><hr /></div>
 <h2 id="vector_Functionality">Vector Functionality</h2>
 
 <h3 id="sum">sum()</h3>
@@ -109,6 +109,37 @@ jStat([[1,2],[3,4]]).sumsqerr() === [ 2, 2 ]</code></pre>
 
 <pre><code>jStat([[1,2],[3,4]]).sumsqerr(true,function( result ) {
     // result === 0
+});</code></pre>
+
+<h3 id="sumrow">sumrow()</h3>
+
+<p><strong>sumrow( array )</strong></p>
+
+<p>Return the sum of a vector in row-based order.</p>
+
+<pre><code>jStat.sumrow([1,2,3]) === 6</code></pre>
+
+<p><strong>fn.sumrow( [bool][,callback] )</strong></p>
+
+<p>Return the sum of a vector or matrix rows.</p>
+
+<pre><code>jStat( 1, 5, 5 ).sumrow() === 15
+jStat([[1,2],[3,4]]).sumrow() === [ 3, 7 ]</code></pre>
+
+<p>If callback is passed then will pass result as first argument.</p>
+
+<pre><code>jStat( 1, 5, 5 ).sumrow(function( result ) {
+    // result === 15
+});</code></pre>
+
+<p>If pass boolean true as first argument, then return sum of entire matrix.</p>
+
+<pre><code>jStat([[1,2],[3,4]]).sumrow( true ) === 10</code></pre>
+
+<p>And the two can be combined.</p>
+
+<pre><code>jStat([[1,2],[3,4]]).sumrow(true,function( result ) {
+    // result === 10
 });</code></pre>
 
 <h3 id="product">product()</h3>
@@ -444,15 +475,10 @@ jStat([[1,2],[3,4],[1,4]]).mode() === [1,4]</code></pre>
     // result === false
 });</code></pre>
 
-<p>If pass boolean true as first argument, then return mode of the matrix.</p>
+<p>If pass boolean true as first argument, then the matrix will be treated as one
+dimensional.</p>
 
-<pre><code>jStat([[1,2],[1,2]]).mode( true ) === [[1,2],[1,2]]</code></pre>
-
-<p>And the two can be combined.</p>
-
-<pre><code>jStat([[1,2],[1,2]]).mode(true,function( result ) {
-    // result === false
-});</code></pre>
+<pre><code>jStat([[5,4],[5, 2], [5,2]]).mode( true ) === 5</code></pre>
 
 <h3 id="range">range()</h3>
 
@@ -711,6 +737,14 @@ or matrix (column-by-column).</p>
 <p>Optional parameters alphap and betap govern the quantile estimation method.
 For more details see the Wikipedia page on quantiles or scipy.stats.mstats.mquantiles
 documentation.</p>
+
+<h3 id="percentile">percentile()</h3>
+
+<p><strong>percentile( dataArray, k )</strong></p>
+
+<p>Return the k-th percentile of values in a range, where k is in the range 0..1, exclusive.</p>
+
+<pre><code> jStat.percentile([1, 2, 3, 4], 0.3) === 1.9;</code></pre>
 
 <h3 id="percentileOfScore">percentileOfScore()</h3>
 
