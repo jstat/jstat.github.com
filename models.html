@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>models - jStat Documentation</title>
+	<link rel="stylesheet" href="assets/style.css" />
+	<link rel="stylesheet" href="assets/sh.css" />
+</head>
+<body>
+	<div id="container">
+    <header>
+      <h1>jStat Documentation</h1>
+      <div id="gtoc">
+        <p><a href="index.html">Index</a> | <a href="all.html">View on single page</a></p>
+      </div>
+      <hr />
+    </header>
+	<div id="toc"><h2>Table Of Contents</h2><ul><li><a href="#regression_Models">Regression Models</a></li><li><a href="#instance_Functionality">Instance Functionality</a><ul><li><a href="#ols">ols(endog,exog)</a></li></ul></li></ul><hr /></div>
+<h2 id="regression_Models">Regression Models</h2>
+
+<h2 id="instance_Functionality">Instance Functionality</h2>
+
+<h3 id="ols">ols(endog,exog)</h3>
+
+<p>What&#39;s the <code>endog</code>, <code>exog</code>?</p>
+
+<p>Please see:</p>
+
+<p>http://statsmodels.sourceforge.net/stable/endog_exog.html</p>
+
+<p><code>ols</code> use ordinary least square(OLS) method to estimate linear model and return
+a <code>model</code>object.</p>
+
+<p><code>model</code> object attribute is vrey like to <code>statsmodels</code> result object attribute
+(nobs,coef,...).</p>
+
+<p>The following example is compared by <code>statsmodels</code>. They take same result
+exactly.</p>
+
+<pre><code>	var A=[[1,2,3],
+        [1,1,0],
+        [1,-2,3],
+        [1,3,4],
+        [1,-10,2],
+        [1,4,4],
+        [1,10,2],
+        [1,3,2],
+        [1,4,-1]];
+	var b=[1,-2,3,4,-5,6,7,-8,9];
+	var model=jStat.models.ols(b,A);
+
+// coefficient estimated
+model.coef // -&gt; [0.662197222856431, 0.5855663255775336, 0.013512111085743017]
+
+	// R2
+model.R2 // -&gt; 0.309
+
+	// t test P-value
+model.t.p // -&gt; [0.8377444317889267, 0.15296736158442314, 0.9909627983826583]
+
+	// f test P-value
+	model.f.pvalue // -&gt; 0.3306363671859872</code></pre>
+	</div>
+	<script src="assets/sh_main.js"></script>
+	<script src="assets/sh_javascript.min.js"></script>
+	<script src="//cdn.jsdelivr.net/jstat/latest/jstat.min.js"></script>
+	<script>highlight(undefined, undefined, 'pre');</script>
+</body>
+</html>

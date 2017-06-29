@@ -15,7 +15,7 @@
       </div>
       <hr />
     </header>
-	<div id="toc"><h2>Table Of Contents</h2><ul><li><a href="#overview">Overview</a><ul><li><a href="#description">Description</a></li><li><a href="#architecture">Architecture</a></li></ul></li><li><a href="#core_Functionality">Core Functionality</a><ul><li><a href="#jStat">jStat()</a></li><li><a href="#rows">rows()</a></li><li><a href="#cols">cols()</a></li><li><a href="#dimensions">dimensions()</a></li><li><a href="#row">row()</a></li><li><a href="#col">col()</a></li><li><a href="#diag">diag()</a></li><li><a href="#antidiag">antidiag()</a></li><li><a href="#transpose">transpose()</a></li><li><a href="#map">map( func )</a></li><li><a href="#cumreduce">cumreduce( func )</a></li><li><a href="#alter">alter( func )</a></li><li><a href="#create">create()</a></li><li><a href="#zeros">zeros()</a></li><li><a href="#ones">ones()</a></li><li><a href="#rand">rand()</a></li><li><a href="#identity">identity()</a></li><li><a href="#clear">clear()</a></li><li><a href="#symmetric">symmetric()</a></li></ul></li><li><a href="#jStat_Utility_Methods">jStat Utility Methods</a><ul><li><a href="#utils.calcRdx">utils.calcRdx( num0, num1 )</a></li><li><a href="#utils.isArray">utils.isArray( arg )</a></li><li><a href="#utils.isFunction">utils.isFunction( arg )</a></li><li><a href="#utils.isNumber">utils.isNumber( arg )</a></li></ul></li><li><a href="#vector_Functionality">Vector Functionality</a><ul><li><a href="#sum">sum()</a></li><li><a href="#sumsqrd">sumsqrd()</a></li><li><a href="#sumsqerr">sumsqerr()</a></li><li><a href="#sumrow">sumrow()</a></li><li><a href="#product">product()</a></li><li><a href="#min">min()</a></li><li><a href="#max">max()</a></li><li><a href="#mean">mean()</a></li><li><a href="#meansqerr">meansqerr()</a></li><li><a href="#geomean">geomean()</a></li><li><a href="#median">median()</a></li><li><a href="#cumsum">cumsum()</a></li><li><a href="#cumprod">cumprod()</a></li><li><a href="#diff">diff()</a></li><li><a href="#mode">mode()</a></li><li><a href="#range">range()</a></li><li><a href="#variance">variance()</a></li><li><a href="#stdev">stdev()</a></li><li><a href="#meandev">meandev()</a></li><li><a href="#meddev">meddev()</a></li><li><a href="#skewness">skewness()</a></li><li><a href="#kurtosis">kurtosis()</a></li><li><a href="#coeffvar">coeffvar()</a></li><li><a href="#quartiles">quartiles()</a></li><li><a href="#quantiles">quantiles()</a></li><li><a href="#percentile">percentile()</a></li><li><a href="#percentileOfScore">percentileOfScore()</a></li><li><a href="#histogram">histogram()</a></li><li><a href="#covariance">covariance()</a></li><li><a href="#corrcoeff">corrcoeff()</a></li></ul></li><li><a href="#distributions">Distributions</a><ul><li><a href="#jStat.beta">jStat.beta( alpha, beta )</a><ul><li><a href="#jStat.beta.pdf">jStat.beta.pdf( x, alpha, beta )</a></li><li><a href="#jStat.beta.cdf">jStat.beta.cdf( x, alpha, beta )</a></li><li><a href="#jStat.beta.inv">jStat.beta.inv( p, alpha, beta )</a></li><li><a href="#jStat.beta.mean">jStat.beta.mean( alpha, beta )</a></li><li><a href="#jStat.beta.median">jStat.beta.median( alpha, beta )</a></li><li><a href="#jStat.beta.mode">jStat.beta.mode( alpha, beta )</a></li><li><a href="#jStat.beta.sample">jStat.beta.sample( alpha, beta )</a></li><li><a href="#jStat.beta.variance">jStat.beta.variance( alpha, beta )</a></li></ul></li><li><a href="#jStat.centralF">jStat.centralF( df1, df2 )</a><ul><li><a href="#jStat.centralF.pdf">jStat.centralF.pdf( x, df1, df2 )</a></li><li><a href="#jStat.centralF.cdf">jStat.centralF.cdf( x, df1, df2 )</a></li><li><a href="#jStat.centralF.inv">jStat.centralF.inv( x, df1, df2 )</a></li><li><a href="#jStat.centralF.mean">jStat.centralF.mean( df1, df2 )</a></li><li><a href="#jStat.centralF.mode">jStat.centralF.mode( df1, df2 )</a></li><li><a href="#jStat.centralF.sample">jStat.centralF.sample( df1, df2 )</a></li><li><a href="#jStat.centralF.variance">jStat.centralF.variance( df1, df2 )</a></li></ul></li><li><a href="#jStat.cauchy">jStat.cauchy( local, scale )</a><ul><li><a href="#jStat.cauchy.pdf">jStat.cauchy.pdf( x, local, scale )</a></li><li><a href="#jStat.cauchy.cdf">jStat.cauchy.cdf( x, local, scale )</a></li><li><a href="#jStat.cauchy.inv">jStat.cauchy.inv( p, local, scale )</a></li><li><a href="#jStat.cauchy.median">jStat.cauchy.median( local, scale )</a></li><li><a href="#jStat.cauchy.mode">jStat.cauchy.mode( local, scale )</a></li><li><a href="#jStat.cauchy.sample">jStat.cauchy.sample( local, scale )</a></li><li><a href="#jStat.cauchy.variance">jStat.cauchy.variance( local, scale )</a></li></ul></li><li><a href="#jStat.chisquare">jStat.chisquare( dof )</a><ul><li><a href="#jStat.chisquare.pdf">jStat.chisquare.pdf( x, dof )</a></li><li><a href="#jStat.chisquare.cdf">jStat.chisquare.cdf( x, dof )</a></li><li><a href="#jStat.chisquare.inv">jStat.chisquare.inv( p, dof )</a></li><li><a href="#jStat.chisquare.mean">jStat.chisquare.mean( dof )</a></li><li><a href="#jStat.chisquare.median">jStat.chisquare.median( dof )</a></li><li><a href="#jStat.chisquare.mode">jStat.chisquare.mode( dof )</a></li><li><a href="#jStat.chisquare.sample">jStat.chisquare.sample( dof )</a></li><li><a href="#jStat.chisquare.variance">jStat.chisquare.variance( dof )</a></li></ul></li><li><a href="#jStat.exponential">jStat.exponential( rate )</a><ul><li><a href="#jStat.exponential.pdf">jStat.exponential.pdf( x, rate )</a></li><li><a href="#jStat.exponential.cdf">jStat.exponential.cdf( x, rate )</a></li><li><a href="#jStat.exponential.inv">jStat.exponential.inv( p, rate )</a></li><li><a href="#jStat.exponential.mean">jStat.exponential.mean( rate )</a></li><li><a href="#jStat.exponential.median">jStat.exponential.median( rate )</a></li><li><a href="#jStat.exponential.mode">jStat.exponential.mode( rate )</a></li><li><a href="#jStat.exponential.sample">jStat.exponential.sample( rate )</a></li><li><a href="#jStat.exponential.variance">jStat.exponential.variance( rate )</a></li></ul></li><li><a href="#jStat.gamma">jStat.gamma( shape, scale )</a><ul><li><a href="#jStat.gamma.pdf">jStat.gamma.pdf( x, shape, scale )</a></li><li><a href="#jStat.gamma.cdf">jStat.gamma.cdf( x, shape, scale )</a></li><li><a href="#jStat.gamma.inv">jStat.gamma.inv( p, shape, scale )</a></li><li><a href="#jStat.gamma.mean">jStat.gamma.mean( shape, scale )</a></li><li><a href="#jStat.gamma.mode">jStat.gamma.mode( shape, scale )</a></li><li><a href="#jStat.gamma.sample">jStat.gamma.sample( shape, scale )</a></li><li><a href="#jStat.gamma.variance">jStat.gamma.variance( shape, scale )</a></li></ul></li><li><a href="#jStat.invgamma">jStat.invgamma( shape, scale )</a><ul><li><a href="#jStat.invgamma.pdf">jStat.invgamma.pdf( x, shape, scale )</a></li><li><a href="#jStat.invgamma.cdf">jStat.invgamma.cdf( x, shape, scale )</a></li><li><a href="#jStat.invgamma.inv">jStat.invgamma.inv( p, shape, scale )</a></li><li><a href="#jStat.invgamma.mean">jStat.invgamma.mean( shape, scale )</a></li><li><a href="#jStat.invgamma.mode">jStat.invgamma.mode( shape, scale )</a></li><li><a href="#jStat.invgamma.sample">jStat.invgamma.sample( shape, scale )</a></li><li><a href="#jStat.invgamma.variance">jStat.invgamma.variance( shape, scale )</a></li></ul></li><li><a href="#jStat.kumaraswamy">jStat.kumaraswamy( alpha, beta )</a><ul><li><a href="#jStat.kumaraswamy.pdf">jStat.kumaraswamy.pdf( x, a, b )</a></li><li><a href="#jStat.kumaraswamy.cdf">jStat.kumaraswamy.cdf( x, alpha, beta )</a></li><li><a href="#jStat.kumaraswamy.inv">jStat.kumaraswamy.inv( p, alpha, beta )</a></li><li><a href="#jStat.kumaraswamy.mean">jStat.kumaraswamy.mean( alpha, beta )</a></li><li><a href="#jStat.kumaraswamy.median">jStat.kumaraswamy.median( alpha, beta )</a></li><li><a href="#jStat.kumaraswamy.mode">jStat.kumaraswamy.mode( alpha, beta )</a></li><li><a href="#jStat.kumaraswamy.variance">jStat.kumaraswamy.variance( alpha, beta )</a></li></ul></li><li><a href="#jStat.lognormal">jStat.lognormal( mu, sigma )</a><ul><li><a href="#jStat.lognormal.pdf">jStat.lognormal.pdf( x, mu, sigma )</a></li><li><a href="#jStat.lognormal.cdf">jStat.lognormal.cdf( x, mu, sigma )</a></li><li><a href="#jStat.lognormal.inv">jStat.lognormal.inv( p, mu, sigma )</a></li><li><a href="#jStat.lognormal.mean">jStat.lognormal.mean( mu, sigma )</a></li><li><a href="#jStat.lognormal.median">jStat.lognormal.median( mu, sigma )</a></li><li><a href="#jStat.lognormal.mode">jStat.lognormal.mode( mu, sigma )</a></li><li><a href="#jStat.lognormal.sample">jStat.lognormal.sample( mu, sigma )</a></li><li><a href="#jStat.lognormal.variance">jStat.lognormal.variance( mu, sigma )</a></li></ul></li><li><a href="#jStat.normal">jStat.normal( mean, std )</a><ul><li><a href="#jStat.normal.pdf">jStat.normal.pdf( x, mean, std )</a></li><li><a href="#jStat.normal.cdf">jStat.normal.cdf( x, mean, std )</a></li><li><a href="#jStat.normal.inv">jStat.normal.inv( p, mean, std )</a></li><li><a href="#jStat.normal.mean">jStat.normal.mean( mean, std )</a></li><li><a href="#jStat.normal.median">jStat.normal.median( mean, std )</a></li><li><a href="#jStat.normal.mode">jStat.normal.mode( mean, std )</a></li><li><a href="#jStat.normal.sample">jStat.normal.sample( mean, std )</a></li><li><a href="#jStat.normal.variance">jStat.normal.variance( mean, std )</a></li></ul></li><li><a href="#jStat.pareto">jStat.pareto( scale, shape )</a><ul><li><a href="#jStat.pareto.pdf">jStat.pareto.pdf( x, scale, shape )</a></li><li><a href="#jStat.pareto.inv">jStat.pareto.inv( p, scale, shape )</a></li><li><a href="#jStat.pareto.cdf">jStat.pareto.cdf( x, scale, shape )</a></li><li><a href="#jStat.pareto.mean">jStat.pareto.mean( scale, shape )</a></li><li><a href="#jStat.pareto.median">jStat.pareto.median( scale, shape )</a></li><li><a href="#jStat.pareto.mode">jStat.pareto.mode( scale, shape )</a></li><li><a href="#jStat.pareto.variance">jStat.pareto.variance( scale, shape )</a></li></ul></li><li><a href="#jStat.studentt">jStat.studentt( dof )</a><ul><li><a href="#jStat.studentt.pdf">jStat.studentt.pdf( x, dof )</a></li><li><a href="#jStat.studentt.cdf">jStat.studentt.cdf( x, dof )</a></li><li><a href="#jStat.studentt.inv">jStat.studentt.inv( p, dof )</a></li><li><a href="#jStat.studentt.mean">jStat.studentt.mean( dof )</a></li><li><a href="#jStat.studentt.median">jStat.studentt.median( dof )</a></li><li><a href="#jStat.studentt.mode">jStat.studentt.mode( dof )</a></li><li><a href="#jStat.studentt.sample">jStat.studentt.sample( dof )</a></li><li><a href="#jStat.studentt.variance">jStat.studentt.variance( dof )</a></li></ul></li><li><a href="#jStat.weibull">jStat.weibull( scale, shape )</a><ul><li><a href="#jStat.weibull.pdf">jStat.weibull.pdf( x, scale, shape )</a></li><li><a href="#jStat.weibull.cdf">jStat.weibull.cdf( x, scale, shape )</a></li><li><a href="#jStat.weibull.inv">jStat.weibull.inv( p, scale, shape )</a></li><li><a href="#jStat.weibull.mean">jStat.weibull.mean( scale, shape )</a></li><li><a href="#jStat.weibull.median">jStat.weibull.median( scale, shape )</a></li><li><a href="#jStat.weibull.mode">jStat.weibull.mode( scale, shape )</a></li><li><a href="#jStat.weibull.sample">jStat.weibull.sample( scale, shape )</a></li><li><a href="#jStat.weibull.variance">jStat.weibull.variance( scale, shape )</a></li></ul></li><li><a href="#jStat.uniform">jStat.uniform( a, b )</a><ul><li><a href="#jStat.uniform.pdf">jStat.uniform.pdf( x, a, b )</a></li><li><a href="#jStat.uniform.cdf">jStat.uniform.cdf( x, a, b )</a></li><li><a href="#jStat.uniform.inv">jStat.uniform.inv(p, a, b)</a></li><li><a href="#jStat.uniform.mean">jStat.uniform.mean( a, b )</a></li><li><a href="#jStat.uniform.median">jStat.uniform.median( a, b )</a></li><li><a href="#jStat.uniform.mode">jStat.uniform.mode( a, b )</a></li><li><a href="#jStat.uniform.sample">jStat.uniform.sample( a, b )</a></li><li><a href="#jStat.uniform.variance">jStat.uniform.variance( a, b )</a></li></ul></li><li><a href="#jStat.binomial">jStat.binomial</a><ul><li><a href="#jStat.binomial.pdf">jStat.binomial.pdf( k, n, p )</a></li><li><a href="#jStat.binomial.cdf">jStat.binomial.cdf( k, n, p )</a></li></ul></li><li><a href="#jStat.negbin">jStat.negbin</a><ul><li><a href="#jStat.negbin.pdf">jStat.negbin.pdf( k, r, p )</a></li><li><a href="#jStat.negbin.cdf">jStat.negbin.cdf( x, r, p )</a></li></ul></li><li><a href="#jStat.hypgeom">jStat.hypgeom</a><ul><li><a href="#jStat.hypgeom.pdf">jStat.hypgeom.pdf( k, N, m, n )</a></li><li><a href="#jStat.hypgeom.cdf">jStat.hypgeom.cdf( x, N, m, n )</a></li></ul></li><li><a href="#jStat.poisson">jStat.poisson</a><ul><li><a href="#jStat.poisson.pdf">jStat.poisson.pdf( k, l )</a></li><li><a href="#jStat.poisson.cdf">jStat.poisson.cdf( x, l )</a></li></ul></li><li><a href="#jStat.triangular">jStat.triangular</a><ul><li><a href="#jStat.triangular.pdf">jStat.triangular.pdf( x, a, b, c )</a></li><li><a href="#jStat.triangular.cdf">jStat.triangular.cdf( x, a, b, c )</a></li><li><a href="#jStat.triangular.mean">jStat.triangular.mean( a, b, c )</a></li><li><a href="#jStat.triangular.median">jStat.triangular.median( a, b, c )</a></li><li><a href="#jStat.triangular.mode">jStat.triangular.mode( a, b, c )</a></li><li><a href="#jStat.triangular.variance">jStat.triangular.variance( a, b, c )</a></li></ul></li></ul></li><li><a href="#special_Functions">Special Functions</a><ul><li><a href="#betafn">betafn( x, y )</a></li><li><a href="#betaln">betaln( x, y )</a></li><li><a href="#betacf">betacf( x, a, b )</a></li><li><a href="#ibetainv">ibetainv( p, a, b)</a></li><li><a href="#ibeta">ibeta( x, a, b)</a></li><li><a href="#gammafn">gammafn( x )</a></li><li><a href="#gammaln">gammaln( x )</a></li><li><a href="#gammap">gammap( a, x )</a></li><li><a href="#lowRegGamma">lowRegGamma(a, x)</a></li><li><a href="#gammapinv">gammapinv( p, a )</a></li><li><a href="#factorialln">factorialln( n )</a></li><li><a href="#factorial">factorial( n )</a></li><li><a href="#combination">combination( n, m )</a></li><li><a href="#permutation">permutation( n, m )</a></li><li><a href="#erf">erf( x )</a></li><li><a href="#erfc">erfc( x )</a></li><li><a href="#erfcinv">erfcinv( p )</a></li><li><a href="#randn">randn( n, m )</a></li><li><a href="#randg">randg( shape, n, m )</a></li></ul></li><li><a href="#linear_Algebra">Linear Algebra</a></li><li><a href="#instance_Functionality">Instance Functionality</a><ul><li><a href="#add">add( arg )</a></li><li><a href="#subtract">subtract( arg )</a></li><li><a href="#divide">divide( arg )</a></li><li><a href="#multiply">multiply( arg )</a></li><li><a href="#dot">dot( arg )</a></li><li><a href="#pow">pow( arg )</a></li><li><a href="#exp">exp()</a></li><li><a href="#log">log()</a></li><li><a href="#abs">abs()</a></li><li><a href="#norm">norm()</a></li><li><a href="#angle">angle( arg )</a></li></ul></li><li><a href="#static_Functionality">Static Functionality</a><ul><li><a href="#add">add( arr, arg )</a></li><li><a href="#subtract">subtract( arr, arg )</a></li><li><a href="#divide">divide( arr, arg )</a></li><li><a href="#multiply">multiply( arr, arg )</a></li><li><a href="#dot">dot( arr1, arr2 )</a></li><li><a href="#pow">pow( arr, arg )</a></li><li><a href="#exp">exp(arr)</a></li><li><a href="#log">log(arr)</a></li><li><a href="#abs">abs(arr)</a></li><li><a href="#norm">norm(arr)</a></li><li><a href="#angle">angle( arr1, arr2 )</a></li><li><a href="#aug">aug(A,B)</a></li><li><a href="#det">det(A)</a></li><li><a href="#inv">inv(A)</a></li><li><a href="#gauss_elimination">gauss_elimination(A,B)</a></li><li><a href="#gauss_jordan">gauss_jordan(A,B)</a></li><li><a href="#lu">lu(A,B)</a></li><li><a href="#cholesky">cholesky(A)</a></li><li><a href="#gauss_jacobi">gauss_jacobi(A,b,x,r)</a></li><li><a href="#gauss_seidel">gauss_seidel(A,b,x,r)</a></li><li><a href="#sOR">SOR(A,b,x,r,w)</a></li><li><a href="#householder">householder(A)</a></li><li><a href="#qR">QR()</a></li><li><a href="#jacobi">jacobi()</a></li><li><a href="#rungekutta">rungekutta()</a></li><li><a href="#romberg">romberg()</a></li><li><a href="#richardson">richardson()</a></li><li><a href="#simpson">simpson()</a></li><li><a href="#hermite">hermite()</a></li><li><a href="#lagrange">lagrange()</a></li><li><a href="#cubic_spline">cubic_spline()</a></li><li><a href="#gauss_quadrature">gauss_quadrature()</a></li><li><a href="#pCA">PCA()</a></li></ul></li><li><a href="#statistical_Tests">Statistical Tests</a></li><li><a href="#statistics_Instance_Functionality">Statistics Instance Functionality</a><ul><li><a href="#zscore">zscore( value[, flag])</a></li><li><a href="#ztest">ztest( value, sides[, flag])</a></li><li><a href="#tscore">tscore( value)</a></li><li><a href="#ttest">ttest( value, sides)</a></li><li><a href="#anovafscore">anovafscore()</a></li><li><a href="#anovaftest">anovaftest()</a></li></ul></li><li><a href="#static_Methods_">Static Methods </a></li><li><a href="#z_Statistics">Z Statistics</a><ul><li><a href="#jStat.zscore">jStat.zscore( value, mean, sd)</a></li><li><a href="#jStat.zscore">jStat.zscore( value, array[, flag])</a></li><li><a href="#jStat.ztest">jStat.ztest( value, mean, sd, sides)</a></li><li><a href="#jStat.ztest">jStat.ztest( zscore, sides)</a></li><li><a href="#jStat.ztest">jStat.ztest( value, array, sides[, flag])</a></li></ul></li><li><a href="#t_Statistics">T Statistics</a><ul><li><a href="#jStat.tscore">jStat.tscore( value, mean, sd, n)</a></li><li><a href="#jStat.tscore">jStat.tscore( value, array)</a></li><li><a href="#jStat.ttest">jStat.ttest( value, mean, sd, n, sides)</a></li><li><a href="#jStat.ttest">jStat.ttest( tscore, n, sides)</a></li><li><a href="#jStat.ttest">jStat.ttest( value, array, sides)</a></li></ul></li><li><a href="#f_Statistics">F Statistics</a><ul><li><a href="#jStat.anovafscore">jStat.anovafscore( array1, array2, ..., arrayn)</a></li><li><a href="#jStat.anovafscore">jStat.anovafscore( [array1,array2, ...,arrayn])</a></li><li><a href="#jStat.anovaftest">jStat.anovaftest( array1, array2, ...., arrayn)</a></li><li><a href="#jStat.ftest">jStat.ftest( fscore, df1, df2)</a></li></ul></li><li><a href="#confidence_Intervals">Confidence Intervals</a><ul><li><a href="#jStat.normalci">jStat.normalci( value, alpha, sd, n)</a></li><li><a href="#jStat.normalci">jStat.normalci( value, alpha, array)</a></li><li><a href="#jStat.tci">jStat.tci( value, alpha, sd, n)</a></li><li><a href="#jStat.tci">jStat.tci( value, alpha, array)</a></li><li><a href="#jStat.oneSidedDifferenceOfProportions">jStat.oneSidedDifferenceOfProportions( p1, n1, p2, n2)</a></li><li><a href="#jStat.twoSidedDifferenceOfProportions">jStat.twoSidedDifferenceOfProportions( p1, n1, p2, n2)</a></li></ul></li></ul><hr /></div>
+	<div id="toc"><h2>Table Of Contents</h2><ul><li><a href="#overview">Overview</a><ul><li><a href="#description">Description</a></li><li><a href="#architecture">Architecture</a></li></ul></li><li><a href="#core_Functionality">Core Functionality</a><ul><li><a href="#jStat">jStat()</a></li><li><a href="#rows">rows()</a></li><li><a href="#rowa">rowa()</a></li><li><a href="#cols">cols()</a></li><li><a href="#cola">cola()</a></li><li><a href="#slice">slice()</a></li><li><a href="#sliceAssign">sliceAssign()</a></li><li><a href="#dimensions">dimensions()</a></li><li><a href="#row">row()</a></li><li><a href="#col">col()</a></li><li><a href="#diag">diag()</a></li><li><a href="#antidiag">antidiag()</a></li><li><a href="#diagonal">diagonal()</a></li><li><a href="#transpose">transpose()</a></li><li><a href="#map">map( func )</a></li><li><a href="#cumreduce">cumreduce( func )</a></li><li><a href="#alter">alter( func )</a></li><li><a href="#create">create()</a></li><li><a href="#zeros">zeros()</a></li><li><a href="#ones">ones()</a></li><li><a href="#rand">rand()</a></li><li><a href="#copy">copy()</a></li><li><a href="#identity">identity()</a></li><li><a href="#seq">seq()</a></li><li><a href="#arange">arange()</a></li><li><a href="#clear">clear()</a></li><li><a href="#symmetric">symmetric()</a></li></ul></li><li><a href="#jStat_Utility_Methods">jStat Utility Methods</a><ul><li><a href="#utils.calcRdx">utils.calcRdx( num0, num1 )</a></li><li><a href="#utils.isArray">utils.isArray( arg )</a></li><li><a href="#utils.isFunction">utils.isFunction( arg )</a></li><li><a href="#utils.isNumber">utils.isNumber( arg )</a></li></ul></li><li><a href="#vector_Functionality">Vector Functionality</a><ul><li><a href="#sum">sum()</a></li><li><a href="#sumsqrd">sumsqrd()</a></li><li><a href="#sumsqerr">sumsqerr()</a></li><li><a href="#sumrow">sumrow()</a></li><li><a href="#product">product()</a></li><li><a href="#min">min()</a></li><li><a href="#max">max()</a></li><li><a href="#mean">mean()</a></li><li><a href="#meansqerr">meansqerr()</a></li><li><a href="#geomean">geomean()</a></li><li><a href="#median">median()</a></li><li><a href="#cumsum">cumsum()</a></li><li><a href="#cumprod">cumprod()</a></li><li><a href="#diff">diff()</a></li><li><a href="#rank">rank()</a></li><li><a href="#mode">mode()</a></li><li><a href="#range">range()</a></li><li><a href="#variance">variance()</a></li><li><a href="#pooledvariance">pooledvariance()</a></li><li><a href="#deviation">deviation()</a></li><li><a href="#stdev">stdev()</a></li><li><a href="#pooledstdev">pooledstdev()</a></li><li><a href="#meandev">meandev()</a></li><li><a href="#meddev">meddev()</a></li><li><a href="#skewness">skewness()</a></li><li><a href="#kurtosis">kurtosis()</a></li><li><a href="#coeffvar">coeffvar()</a></li><li><a href="#quartiles">quartiles()</a></li><li><a href="#quantiles">quantiles()</a></li><li><a href="#percentile">percentile()</a></li><li><a href="#percentileOfScore">percentileOfScore()</a></li><li><a href="#histogram">histogram()</a></li><li><a href="#covariance">covariance()</a></li><li><a href="#corrcoeff">corrcoeff()</a></li></ul></li><li><a href="#distributions">Distributions</a><ul><li><a href="#jStat.beta">jStat.beta( alpha, beta )</a><ul><li><a href="#jStat.beta.pdf">jStat.beta.pdf( x, alpha, beta )</a></li><li><a href="#jStat.beta.cdf">jStat.beta.cdf( x, alpha, beta )</a></li><li><a href="#jStat.beta.inv">jStat.beta.inv( p, alpha, beta )</a></li><li><a href="#jStat.beta.mean">jStat.beta.mean( alpha, beta )</a></li><li><a href="#jStat.beta.median">jStat.beta.median( alpha, beta )</a></li><li><a href="#jStat.beta.mode">jStat.beta.mode( alpha, beta )</a></li><li><a href="#jStat.beta.sample">jStat.beta.sample( alpha, beta )</a></li><li><a href="#jStat.beta.variance">jStat.beta.variance( alpha, beta )</a></li></ul></li><li><a href="#jStat.centralF">jStat.centralF( df1, df2 )</a><ul><li><a href="#jStat.centralF.pdf">jStat.centralF.pdf( x, df1, df2 )</a></li><li><a href="#jStat.centralF.cdf">jStat.centralF.cdf( x, df1, df2 )</a></li><li><a href="#jStat.centralF.inv">jStat.centralF.inv(p, df1, df2 )</a></li><li><a href="#jStat.centralF.mean">jStat.centralF.mean( df1, df2 )</a></li><li><a href="#jStat.centralF.mode">jStat.centralF.mode( df1, df2 )</a></li><li><a href="#jStat.centralF.sample">jStat.centralF.sample( df1, df2 )</a></li><li><a href="#jStat.centralF.variance">jStat.centralF.variance( df1, df2 )</a></li></ul></li><li><a href="#jStat.cauchy">jStat.cauchy( local, scale )</a><ul><li><a href="#jStat.cauchy.pdf">jStat.cauchy.pdf( x, local, scale )</a></li><li><a href="#jStat.cauchy.cdf">jStat.cauchy.cdf( x, local, scale )</a></li><li><a href="#jStat.cauchy.inv">jStat.cauchy.inv( p, local, scale )</a></li><li><a href="#jStat.cauchy.median">jStat.cauchy.median( local, scale )</a></li><li><a href="#jStat.cauchy.mode">jStat.cauchy.mode( local, scale )</a></li><li><a href="#jStat.cauchy.sample">jStat.cauchy.sample( local, scale )</a></li><li><a href="#jStat.cauchy.variance">jStat.cauchy.variance( local, scale )</a></li></ul></li><li><a href="#jStat.chisquare">jStat.chisquare( dof )</a><ul><li><a href="#jStat.chisquare.pdf">jStat.chisquare.pdf( x, dof )</a></li><li><a href="#jStat.chisquare.cdf">jStat.chisquare.cdf( x, dof )</a></li><li><a href="#jStat.chisquare.inv">jStat.chisquare.inv( p, dof )</a></li><li><a href="#jStat.chisquare.mean">jStat.chisquare.mean( dof )</a></li><li><a href="#jStat.chisquare.median">jStat.chisquare.median( dof )</a></li><li><a href="#jStat.chisquare.mode">jStat.chisquare.mode( dof )</a></li><li><a href="#jStat.chisquare.sample">jStat.chisquare.sample( dof )</a></li><li><a href="#jStat.chisquare.variance">jStat.chisquare.variance( dof )</a></li></ul></li><li><a href="#jStat.exponential">jStat.exponential( rate )</a><ul><li><a href="#jStat.exponential.pdf">jStat.exponential.pdf( x, rate )</a></li><li><a href="#jStat.exponential.cdf">jStat.exponential.cdf( x, rate )</a></li><li><a href="#jStat.exponential.inv">jStat.exponential.inv( p, rate )</a></li><li><a href="#jStat.exponential.mean">jStat.exponential.mean( rate )</a></li><li><a href="#jStat.exponential.median">jStat.exponential.median( rate )</a></li><li><a href="#jStat.exponential.mode">jStat.exponential.mode( rate )</a></li><li><a href="#jStat.exponential.sample">jStat.exponential.sample( rate )</a></li><li><a href="#jStat.exponential.variance">jStat.exponential.variance( rate )</a></li></ul></li><li><a href="#jStat.gamma">jStat.gamma( shape, scale )</a><ul><li><a href="#jStat.gamma.pdf">jStat.gamma.pdf( x, shape, scale )</a></li><li><a href="#jStat.gamma.cdf">jStat.gamma.cdf( x, shape, scale )</a></li><li><a href="#jStat.gamma.inv">jStat.gamma.inv( p, shape, scale )</a></li><li><a href="#jStat.gamma.mean">jStat.gamma.mean( shape, scale )</a></li><li><a href="#jStat.gamma.mode">jStat.gamma.mode( shape, scale )</a></li><li><a href="#jStat.gamma.sample">jStat.gamma.sample( shape, scale )</a></li><li><a href="#jStat.gamma.variance">jStat.gamma.variance( shape, scale )</a></li></ul></li><li><a href="#jStat.invgamma">jStat.invgamma( shape, scale )</a><ul><li><a href="#jStat.invgamma.pdf">jStat.invgamma.pdf( x, shape, scale )</a></li><li><a href="#jStat.invgamma.cdf">jStat.invgamma.cdf( x, shape, scale )</a></li><li><a href="#jStat.invgamma.inv">jStat.invgamma.inv( p, shape, scale )</a></li><li><a href="#jStat.invgamma.mean">jStat.invgamma.mean( shape, scale )</a></li><li><a href="#jStat.invgamma.mode">jStat.invgamma.mode( shape, scale )</a></li><li><a href="#jStat.invgamma.sample">jStat.invgamma.sample( shape, scale )</a></li><li><a href="#jStat.invgamma.variance">jStat.invgamma.variance( shape, scale )</a></li></ul></li><li><a href="#jStat.kumaraswamy">jStat.kumaraswamy( alpha, beta )</a><ul><li><a href="#jStat.kumaraswamy.pdf">jStat.kumaraswamy.pdf( x, a, b )</a></li><li><a href="#jStat.kumaraswamy.cdf">jStat.kumaraswamy.cdf( x, alpha, beta )</a></li><li><a href="#jStat.kumaraswamy.inv">jStat.kumaraswamy.inv( p, alpha, beta )</a></li><li><a href="#jStat.kumaraswamy.mean">jStat.kumaraswamy.mean( alpha, beta )</a></li><li><a href="#jStat.kumaraswamy.median">jStat.kumaraswamy.median( alpha, beta )</a></li><li><a href="#jStat.kumaraswamy.mode">jStat.kumaraswamy.mode( alpha, beta )</a></li><li><a href="#jStat.kumaraswamy.variance">jStat.kumaraswamy.variance( alpha, beta )</a></li></ul></li><li><a href="#jStat.lognormal">jStat.lognormal( mu, sigma )</a><ul><li><a href="#jStat.lognormal.pdf">jStat.lognormal.pdf( x, mu, sigma )</a></li><li><a href="#jStat.lognormal.cdf">jStat.lognormal.cdf( x, mu, sigma )</a></li><li><a href="#jStat.lognormal.inv">jStat.lognormal.inv( p, mu, sigma )</a></li><li><a href="#jStat.lognormal.mean">jStat.lognormal.mean( mu, sigma )</a></li><li><a href="#jStat.lognormal.median">jStat.lognormal.median( mu, sigma )</a></li><li><a href="#jStat.lognormal.mode">jStat.lognormal.mode( mu, sigma )</a></li><li><a href="#jStat.lognormal.sample">jStat.lognormal.sample( mu, sigma )</a></li><li><a href="#jStat.lognormal.variance">jStat.lognormal.variance( mu, sigma )</a></li></ul></li><li><a href="#jStat.normal">jStat.normal( mean, std )</a><ul><li><a href="#jStat.normal.pdf">jStat.normal.pdf( x, mean, std )</a></li><li><a href="#jStat.normal.cdf">jStat.normal.cdf( x, mean, std )</a></li><li><a href="#jStat.normal.inv">jStat.normal.inv( p, mean, std )</a></li><li><a href="#jStat.normal.mean">jStat.normal.mean( mean, std )</a></li><li><a href="#jStat.normal.median">jStat.normal.median( mean, std )</a></li><li><a href="#jStat.normal.mode">jStat.normal.mode( mean, std )</a></li><li><a href="#jStat.normal.sample">jStat.normal.sample( mean, std )</a></li><li><a href="#jStat.normal.variance">jStat.normal.variance( mean, std )</a></li></ul></li><li><a href="#jStat.pareto">jStat.pareto( scale, shape )</a><ul><li><a href="#jStat.pareto.pdf">jStat.pareto.pdf( x, scale, shape )</a></li><li><a href="#jStat.pareto.inv">jStat.pareto.inv( p, scale, shape )</a></li><li><a href="#jStat.pareto.cdf">jStat.pareto.cdf( x, scale, shape )</a></li><li><a href="#jStat.pareto.mean">jStat.pareto.mean( scale, shape )</a></li><li><a href="#jStat.pareto.median">jStat.pareto.median( scale, shape )</a></li><li><a href="#jStat.pareto.mode">jStat.pareto.mode( scale, shape )</a></li><li><a href="#jStat.pareto.variance">jStat.pareto.variance( scale, shape )</a></li></ul></li><li><a href="#jStat.studentt">jStat.studentt( dof )</a><ul><li><a href="#jStat.studentt.pdf">jStat.studentt.pdf( x, dof )</a></li><li><a href="#jStat.studentt.cdf">jStat.studentt.cdf( x, dof )</a></li><li><a href="#jStat.studentt.inv">jStat.studentt.inv( p, dof )</a></li><li><a href="#jStat.studentt.mean">jStat.studentt.mean( dof )</a></li><li><a href="#jStat.studentt.median">jStat.studentt.median( dof )</a></li><li><a href="#jStat.studentt.mode">jStat.studentt.mode( dof )</a></li><li><a href="#jStat.studentt.sample">jStat.studentt.sample( dof )</a></li><li><a href="#jStat.studentt.variance">jStat.studentt.variance( dof )</a></li></ul></li><li><a href="#jStat.tukey">jStat.tukey( nmeans, dof )</a><ul><li><a href="#jStat.tukey.cdf">jStat.tukey.cdf( q, nmeans, dof )</a></li><li><a href="#jStat.tukey.inv">jStat.tukey.inv( p, nmeans, dof )</a></li></ul></li><li><a href="#jStat.weibull">jStat.weibull( scale, shape )</a><ul><li><a href="#jStat.weibull.pdf">jStat.weibull.pdf( x, scale, shape )</a></li><li><a href="#jStat.weibull.cdf">jStat.weibull.cdf( x, scale, shape )</a></li><li><a href="#jStat.weibull.inv">jStat.weibull.inv( p, scale, shape )</a></li><li><a href="#jStat.weibull.mean">jStat.weibull.mean( scale, shape )</a></li><li><a href="#jStat.weibull.median">jStat.weibull.median( scale, shape )</a></li><li><a href="#jStat.weibull.mode">jStat.weibull.mode( scale, shape )</a></li><li><a href="#jStat.weibull.sample">jStat.weibull.sample( scale, shape )</a></li><li><a href="#jStat.weibull.variance">jStat.weibull.variance( scale, shape )</a></li></ul></li><li><a href="#jStat.uniform">jStat.uniform( a, b )</a><ul><li><a href="#jStat.uniform.pdf">jStat.uniform.pdf( x, a, b )</a></li><li><a href="#jStat.uniform.cdf">jStat.uniform.cdf( x, a, b )</a></li><li><a href="#jStat.uniform.inv">jStat.uniform.inv(p, a, b)</a></li><li><a href="#jStat.uniform.mean">jStat.uniform.mean( a, b )</a></li><li><a href="#jStat.uniform.median">jStat.uniform.median( a, b )</a></li><li><a href="#jStat.uniform.mode">jStat.uniform.mode( a, b )</a></li><li><a href="#jStat.uniform.sample">jStat.uniform.sample( a, b )</a></li><li><a href="#jStat.uniform.variance">jStat.uniform.variance( a, b )</a></li></ul></li><li><a href="#jStat.binomial">jStat.binomial</a><ul><li><a href="#jStat.binomial.pdf">jStat.binomial.pdf( k, n, p )</a></li><li><a href="#jStat.binomial.cdf">jStat.binomial.cdf( k, n, p )</a></li></ul></li><li><a href="#jStat.negbin">jStat.negbin</a><ul><li><a href="#jStat.negbin.pdf">jStat.negbin.pdf( k, r, p )</a></li><li><a href="#jStat.negbin.cdf">jStat.negbin.cdf( x, r, p )</a></li></ul></li><li><a href="#jStat.hypgeom">jStat.hypgeom</a><ul><li><a href="#jStat.hypgeom.pdf">jStat.hypgeom.pdf( k, N, m, n )</a></li><li><a href="#jStat.hypgeom.cdf">jStat.hypgeom.cdf( x, N, m, n )</a></li></ul></li><li><a href="#jStat.poisson">jStat.poisson</a><ul><li><a href="#jStat.poisson.pdf">jStat.poisson.pdf( k, l )</a></li><li><a href="#jStat.poisson.cdf">jStat.poisson.cdf( x, l )</a></li></ul></li><li><a href="#jStat.triangular">jStat.triangular</a><ul><li><a href="#jStat.triangular.pdf">jStat.triangular.pdf( x, a, b, c )</a></li><li><a href="#jStat.triangular.cdf">jStat.triangular.cdf( x, a, b, c )</a></li><li><a href="#jStat.triangular.mean">jStat.triangular.mean( a, b, c )</a></li><li><a href="#jStat.triangular.median">jStat.triangular.median( a, b, c )</a></li><li><a href="#jStat.triangular.mode">jStat.triangular.mode( a, b, c )</a></li><li><a href="#jStat.triangular.sample">jStat.triangular.sample( a, b, c )</a></li><li><a href="#jStat.triangular.variance">jStat.triangular.variance( a, b, c )</a></li></ul></li><li><a href="#jStat.arcsine">jStat.arcsine( a, b )</a><ul><li><a href="#jStat.arcsine.pdf">jStat.arcsine.pdf( x, a, b )</a></li><li><a href="#jStat.arcsine.cdf">jStat.arcsine.cdf( x, a, b )</a></li><li><a href="#jStat.arcsine.inv">jStat.arcsine.inv(p, a, b)</a></li><li><a href="#jStat.arcsine.mean">jStat.arcsine.mean( a, b )</a></li><li><a href="#jStat.arcsine.median">jStat.arcsine.median( a, b )</a></li><li><a href="#jStat.arcsine.mode">jStat.arcsine.mode( a, b )</a></li><li><a href="#jStat.arcsine.sample">jStat.arcsine.sample( a, b )</a></li><li><a href="#jStat.arcsine.variance">jStat.arcsine.variance( a, b )</a></li></ul></li></ul></li><li><a href="#special_Functions">Special Functions</a><ul><li><a href="#betafn">betafn( x, y )</a></li><li><a href="#betaln">betaln( x, y )</a></li><li><a href="#betacf">betacf( x, a, b )</a></li><li><a href="#ibetainv">ibetainv( p, a, b)</a></li><li><a href="#ibeta">ibeta( x, a, b)</a></li><li><a href="#gammafn">gammafn( x )</a></li><li><a href="#gammaln">gammaln( x )</a></li><li><a href="#gammap">gammap( a, x )</a></li><li><a href="#lowRegGamma">lowRegGamma(a, x)</a></li><li><a href="#gammapinv">gammapinv( p, a )</a></li><li><a href="#factorialln">factorialln( n )</a></li><li><a href="#factorial">factorial( n )</a></li><li><a href="#combination">combination( n, m )</a></li><li><a href="#permutation">permutation( n, m )</a></li><li><a href="#erf">erf( x )</a></li><li><a href="#erfc">erfc( x )</a></li><li><a href="#erfcinv">erfcinv( p )</a></li><li><a href="#randn">randn( n, m )</a></li><li><a href="#randg">randg( shape, n, m )</a></li></ul></li><li><a href="#linear_Algebra">Linear Algebra</a></li><li><a href="#instance_Functionality">Instance Functionality</a><ul><li><a href="#add">add( arg )</a></li><li><a href="#subtract">subtract( arg )</a></li><li><a href="#divide">divide( arg )</a></li><li><a href="#multiply">multiply( arg )</a></li><li><a href="#dot">dot( arg )</a></li><li><a href="#pow">pow( arg )</a></li><li><a href="#exp">exp()</a></li><li><a href="#log">log()</a></li><li><a href="#abs">abs()</a></li><li><a href="#norm">norm()</a></li><li><a href="#angle">angle( arg )</a></li></ul></li><li><a href="#static_Functionality">Static Functionality</a><ul><li><a href="#add">add( arr, arg )</a></li><li><a href="#subtract">subtract( arr, arg )</a></li><li><a href="#divide">divide( arr, arg )</a></li><li><a href="#multiply">multiply( arr, arg )</a></li><li><a href="#dot">dot( arr1, arr2 )</a></li><li><a href="#outer">outer( A, B )</a></li><li><a href="#pow">pow( arr, arg )</a></li><li><a href="#exp">exp(arr)</a></li><li><a href="#log">log(arr)</a></li><li><a href="#abs">abs(arr)</a></li><li><a href="#norm">norm(arr)</a></li><li><a href="#angle">angle( arr1, arr2 )</a></li><li><a href="#aug">aug(A,B)</a></li><li><a href="#det">det(A)</a></li><li><a href="#inv">inv(A)</a></li><li><a href="#gauss_elimination">gauss_elimination(A,B)</a></li><li><a href="#gauss_jordan">gauss_jordan(A,B)</a></li><li><a href="#lu">lu(A)</a></li><li><a href="#cholesky">cholesky(A)</a></li><li><a href="#gauss_jacobi">gauss_jacobi(A,b,x,r)</a></li><li><a href="#gauss_seidel">gauss_seidel(A,b,x,r)</a></li><li><a href="#sOR">SOR(A,b,x,r,w)</a></li><li><a href="#householder">householder(A)</a></li><li><a href="#qR">QR(A)</a></li><li><a href="#lstsq">lstsq(A,b)</a></li><li><a href="#jacobi">jacobi()</a></li><li><a href="#rungekutta">rungekutta()</a></li><li><a href="#romberg">romberg()</a></li><li><a href="#richardson">richardson()</a></li><li><a href="#simpson">simpson()</a></li><li><a href="#hermite">hermite()</a></li><li><a href="#lagrange">lagrange()</a></li><li><a href="#cubic_spline">cubic_spline()</a></li><li><a href="#gauss_quadrature">gauss_quadrature()</a></li><li><a href="#pCA">PCA()</a></li></ul></li><li><a href="#statistical_Tests">Statistical Tests</a></li><li><a href="#statistics_Instance_Functionality">Statistics Instance Functionality</a><ul><li><a href="#zscore">zscore( value[, flag])</a></li><li><a href="#ztest">ztest( value, sides[, flag])</a></li><li><a href="#tscore">tscore( value)</a></li><li><a href="#ttest">ttest( value, sides)</a></li><li><a href="#anovafscore">anovafscore()</a></li><li><a href="#anovaftest">anovaftest()</a></li></ul></li><li><a href="#static_Methods">Static Methods</a></li><li><a href="#z_Statistics">Z Statistics</a><ul><li><a href="#jStat.zscore">jStat.zscore( value, mean, sd)</a></li><li><a href="#jStat.zscore">jStat.zscore( value, array[, flag])</a></li><li><a href="#jStat.ztest">jStat.ztest( value, mean, sd, sides)</a></li><li><a href="#jStat.ztest">jStat.ztest( zscore, sides)</a></li><li><a href="#jStat.ztest">jStat.ztest( value, array, sides[, flag])</a></li></ul></li><li><a href="#t_Statistics">T Statistics</a><ul><li><a href="#jStat.tscore">jStat.tscore( value, mean, sd, n)</a></li><li><a href="#jStat.tscore">jStat.tscore( value, array)</a></li><li><a href="#jStat.ttest">jStat.ttest( value, mean, sd, n, sides)</a></li><li><a href="#jStat.ttest">jStat.ttest( tscore, n, sides)</a></li><li><a href="#jStat.ttest">jStat.ttest( value, array, sides)</a></li></ul></li><li><a href="#f_Statistics">F Statistics</a><ul><li><a href="#jStat.anovafscore">jStat.anovafscore( array1, array2, ..., arrayn)</a></li><li><a href="#jStat.anovafscore">jStat.anovafscore( [array1,array2, ...,arrayn])</a></li><li><a href="#jStat.anovaftest">jStat.anovaftest( array1, array2, ...., arrayn)</a></li><li><a href="#jStat.ftest">jStat.ftest( fscore, df1, df2)</a></li></ul></li><li><a href="#tukey_s_Range_Test">Tukey's Range Test</a><ul><li><a href="#jStat.qscore">jStat.qscore( mean1, mean2, n1, n2, sd )</a></li><li><a href="#jStat.qscore">jStat.qscore( array1, array2, sd )</a></li><li><a href="#jStat.qtest">jStat.qtest( qscore, n, k )</a></li><li><a href="#jStat.qtest">jStat.qtest( mean1, mean2, n1, n2, sd, n, k )</a></li><li><a href="#jStat.qtest">jStat.qtest( array1, array2, sd, n, k )</a></li><li><a href="#jStat.tukeyhsd">jStat.tukeyhsd( arrays )</a></li></ul></li><li><a href="#confidence_Intervals">Confidence Intervals</a><ul><li><a href="#jStat.normalci">jStat.normalci( value, alpha, sd, n)</a></li><li><a href="#jStat.normalci">jStat.normalci( value, alpha, array)</a></li><li><a href="#jStat.tci">jStat.tci( value, alpha, sd, n)</a></li><li><a href="#jStat.tci">jStat.tci( value, alpha, array)</a></li><li><a href="#jStat.oneSidedDifferenceOfProportions">jStat.oneSidedDifferenceOfProportions( p1, n1, p2, n2)</a></li><li><a href="#jStat.twoSidedDifferenceOfProportions">jStat.twoSidedDifferenceOfProportions( p1, n1, p2, n2)</a></li></ul></li></ul><hr /></div>
 <h2 id="overview">Overview</h2>
 
 <h3 id="description">Description</h3>
@@ -161,6 +161,12 @@ Also note <code>this</code> within the callback refers to the calling jStat obje
     // d === 2
 });</code></pre>
 
+<h3 id="rowa">rowa()</h3>
+
+<p>Return a array from matrix row</p>
+
+<pre><code>rowa([[1,2],[3,4]]) === [1,2];</code></pre>
+
 <h3 id="cols">cols()</h3>
 
 <p>Returns the number of columns in a matrix.</p>
@@ -181,6 +187,28 @@ Also note <code>this</code> within the callback refers to the calling jStat obje
 <pre><code>jStat( matrix ).cols(function( d ) {
     // d === 3
 });</code></pre>
+
+<h3 id="cola">cola()</h3>
+
+<p>Return a array from matrix column (<code>col()</code> will return a matrix form instead of array form)</p>
+
+<pre><code>cola([[1,2],[3,4]]) === [1,3];</code></pre>
+
+<h3 id="slice">slice()</h3>
+
+<p>Slice matrix as numpy style</p>
+
+<pre><code>A=[[1,2,3],[4,5,6],[7,8,9]];
+slice(A,{row:{end:2},col:{start:1}}) === [[2,3],[5,6]];
+slice(A,1,{start:1}) === [5,6];</code></pre>
+
+<h3 id="sliceAssign">sliceAssign()</h3>
+
+<p>Do slice assign as numpy style</p>
+
+<pre><code>A = [[1,2,3],[4,5,6],[7,8,9]];
+sliceAssign(A,{row : {start : 1}, col : {start : 1}},[[0,0],[0,0]]);
+A = [[1,2,3],[4,0,0],[7,0,0]];</code></pre>
 
 <h3 id="dimensions">dimensions()</h3>
 
@@ -209,8 +237,9 @@ Also note <code>this</code> within the callback refers to the calling jStat obje
 
 <p><strong>row( array, index )</strong></p>
 
-<pre><code>var matrix = [[1,2,3],[4,5,6]];
-jStat.row( matrix, 0 ) === [1,2,3];</code></pre>
+<pre><code>var matrix = [[1,2,3],[4,5,6],[7,8,9]];
+jStat.row( matrix, 0 ) === [1,2,3];
+jStat.row( matrix, [0,1] ) === [[1,2,3],[4,5,6]]</code></pre>
 
 <p><strong>fn.row( index[, callback] )</strong></p>
 
@@ -230,12 +259,13 @@ Also note <code>this</code> within the callback refers to the calling jStat obje
 
 <p><strong>col( index )</strong></p>
 
-<pre><code>var matrix = [[1,2],[3,4]];
-jStat.col( matrix, 0 ) === [[1],[3]];</code></pre>
+<pre><code>var matrix = [[1,2,3],[4,5,6],[7,8,9]];
+jStat.col( matrix, 0 ) === [[1],[4],[7]];
+jStat.col( matrix,[0,1] ) === [[1,2],[4,5],[7,8]]</code></pre>
 
 <p><strong>fn.col( index[, callback] )</strong></p>
 
-<pre><code>jStat( matrix ).col( 0 ) === jStat([[1],[3]]);</code></pre>
+<pre><code>jStat( matrix ).col( 0 ) === jStat([[1],[4],[7]]);</code></pre>
 
 <p>Or pass a callback to run the calculation asynchronously and pass on the calculation.
 This allows for continued chaining of methods to the jStat object.
@@ -286,6 +316,12 @@ Also note <code>this</code> within the callback refers to the calling jStat obje
 <pre><code>jStat( matrix ).antidiag(function( d ) {
     // d === jStat([[3],[5],[7]])
 });</code></pre>
+
+<h3 id="diagonal">diagonal()</h3>
+
+<p>Create a new diagonal matrix by given 1d diag array</p>
+
+<pre><code>jStat.diagonal([1,2,3]) === [[1,0,0],[0,2,0],[0,0,3]];</code></pre>
 
 <h3 id="transpose">transpose()</h3>
 
@@ -433,6 +469,10 @@ If <code>col</code> is omitted then it will default to value <code>row</code>.</
 
 <pre><code>jStat().rand( 3 );</code></pre>
 
+<h3 id="copy">copy()</h3>
+
+<p>Return a copy from given matrix</p>
+
 <h3 id="identity">identity()</h3>
 
 <p>Create an identity matrix of row by col.
@@ -448,6 +488,20 @@ If <code>col</code> is omitted then it will default to value <code>row</code>.</
 <p>Use this technique for creating matrices in jStat instances.</p>
 
 <pre><code>jStat().identity( 2 );</code></pre>
+
+<h3 id="seq">seq()</h3>
+
+<p>Create an arithmetic sequence by given length</p>
+
+<pre><code>jStat.seq(1,5,9) === [1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5];</code></pre>
+
+<h3 id="arange">arange()</h3>
+
+<p>Create an arithmetic sequence by given step</p>
+
+<pre><code>arange(5) === [0,1,2,3,4]
+arange(1,5) === [1,2,3,4]
+arange(5,1,-1) === [5,4,3,2]</code></pre>
 
 <h3 id="clear">clear()</h3>
 
@@ -946,6 +1000,37 @@ jStat([[1,2],[3,4],[1,4]]).diff() === [[2,-2],[2,0]]</code></pre>
     // result === [0,2]
 });</code></pre>
 
+<h3 id="rank">rank()</h3>
+
+<p><strong>rank( array )</strong></p>
+
+<p>Return an array of the ranks of the array.</p>
+
+<pre><code>jStat.rank([1, 2, 2, 3]) === [1, 2.5, 2.5, 4]</code></pre>
+
+<p><strong>fn.rank( [bool][,callback] )</strong></p>
+
+<p>Return an array of ranks for a vector or matrix columns.</p>
+
+<pre><code>jStat([1, 2, 2, 3]).rank() === [1, 2.5, 2.5, 4]
+jStat([[1, 2], [3, 4], [1, 4]]).rank() === [[1.5, 3, 1.5], [1, 2.5, 2.5]]</code></pre>
+
+<p>If callback is passed then will pass result as first argument.</p>
+
+<pre><code>jStat([[1, 2], [3, 4], [1, 4]]).rank(function( result ) {
+    // result === [[1.5, 3, 1.5], [1, 2.5, 2.5]]
+});</code></pre>
+
+<p>If pass boolean true as first argument, then return rank for the whole matrix.</p>
+
+<pre><code>jStat([[1, 2], [3, 4], [1, 4]]).rank(true) === [2, 5, 2, 5, 2, 5]</code></pre>
+
+<p>And the two can be combined.</p>
+
+<pre><code>jStat([[1, 2], [3, 4], [1, 4]]).rank(true, function( result ) {
+    // result === [2, 5, 2, 5, 2, 5]
+});</code></pre>
+
 <h3 id="mode">mode()</h3>
 
 <p><strong>mode( array )</strong></p>
@@ -1042,6 +1127,46 @@ jStat([[1,2],[3,4]]).variance() === [1,1]</code></pre>
     // result === 0.140625
 });</code></pre>
 
+<h3 id="pooledvariance">pooledvariance()</h3>
+
+<p><strong>pooledvariance( arrays )</strong></p>
+
+<p>Return the pooled (sample) variance of an array of vectors.
+Assumes the population variance of the vectors are the same.</p>
+
+<pre><code>jStat.pooledvariance([[1,2],[3,4]]) === 0.5</code></pre>
+
+<h3 id="deviation">deviation()</h3>
+
+<p><strong>deviation( array )</strong></p>
+
+<p>Return the deviation of a vector.</p>
+
+<pre><code>jStat.deviation([1,2,3,4]) === [-1.5, -0.5, 0.5, 1.5]</code></pre>
+
+<p><strong>fn.deviation( [bool][,callback] )</strong></p>
+
+<p>Return the deviation for a vector or matrix columns.</p>
+
+<pre><code>jStat([1,2,3,4]).deviation() === [-1.5, -0.5, 0.5, 1.5]
+jStat([[1,2],[3,4]]).deviation() === [[-1,1],[-1,1]]</code></pre>
+
+<p>If callback is passed then will pass result as first argument.</p>
+
+<pre><code>jStat( 1, 4, 4 ).deviation(function( result ) {
+    // result === [-1.5, -0.5, 0.5, 1.5]
+});</code></pre>
+
+<p>If pass boolean true as first argument, then return variance of the matrix.</p>
+
+<pre><code>jStat([[1,2],[3,5]]).deviation( true ) === [-0.5, 0.5, -1, 1]</code></pre>
+
+<p>And the two can be combined.</p>
+
+<pre><code>jStat([[1,2],[3,5]]).deviation(true,function( result ) {
+    // result === [-0.5, 0.5, -1, 1]
+});</code></pre>
+
 <h3 id="stdev">stdev()</h3>
 
 <p><strong>stdev( array[,flag])</strong></p>
@@ -1085,6 +1210,15 @@ jStat( 1, 4, 4 ).stdev(true,function( result ) {
 <pre><code>jStat([[1,2],[3,5]]).stdev(true,function( result ) {
     // result === 0.25
 });</code></pre>
+
+<h3 id="pooledstdev">pooledstdev()</h3>
+
+<p><strong>pooledstdev( arrays )</strong></p>
+
+<p>Return the pooled (sample) standard deviation of an array of vectors.
+Assumes the population standard deviation of the vectors are the same.</p>
+
+<pre><code>jStat.pooledstdev([[1,2],[3,4]]) === 0.707...</code></pre>
 
 <h3 id="meandev">meandev()</h3>
 
@@ -1278,6 +1412,13 @@ jStat.covariance( seq, seq ) === 11;</code></pre>
 <pre><code>var seq = jStat.seq( 0, 10, 11 );
 jStat.corrcoeff( seq, seq ) === 1;</code></pre>
 
+<p><strong>spearmancoeff( array, array )</strong></p>
+
+<p>Return the rank correlation coefficient of two vectors (Spearman&#39;s Rho).</p>
+
+<pre><code>jStat.spearmancoeff([1, 2, 3, 4], [5, 6, 9, 7]) == 0.8;
+jStat.spearmancoeff([1, 2, 2, 4], [5, 2, 5, 7]) == 0.5;</code></pre>
+
 <h2 id="distributions">Distributions</h2>
 
 <h3 id="jStat.beta">jStat.beta( alpha, beta )</h3>
@@ -1316,33 +1457,45 @@ jStat.corrcoeff( seq, seq ) === 1;</code></pre>
 
 <h3 id="jStat.centralF">jStat.centralF( df1, df2 )</h3>
 
+<p>The F Distrbution is used frequently in in analyses of variance. The parameterized by two degrees of freedom. It is defined continuously on x in [0, infinity).</p>
+
+<p>In all cases, df1 is the &quot;numerator degrees of freedom&quot; and df2 is the &quot;denominator degrees of freedom&quot;, which parameterize the distribtuion.</p>
+
 <h4 id="jStat.centralF.pdf">jStat.centralF.pdf( x, df1, df2 )</h4>
 
-<p>Returns the value of x in the pdf of the (Central) F distribution with numerator degrees of freedom df1 and denominator degrees of freedom df2.</p>
+<p>Given x in the range [0, infinity), returns the probability density of the (central) f distribution at x.</p>
+
+<p>This function corresponds to the df(x, df1, df2) function in R.</p>
 
 <h4 id="jStat.centralF.cdf">jStat.centralF.cdf( x, df1, df2 )</h4>
 
-<p>Returns the value of x in the cdf of the (Central) F distribution with numerator degrees of freedom df1 and denominator degrees of freedom df2.</p>
+<p>Given x in the range [0, infinity), returns the cumulative probability density of the central F distribution. That is, <code>jStat.centralF.cdf(2.5, 10, 20)</code> will return the probability that a number randomly selected from the central F distribution with df1 = 10 and df2 = 20 will be less than 5.5.</p>
 
-<h4 id="jStat.centralF.inv">jStat.centralF.inv( x, df1, df2 )</h4>
+<p>This function corresponds to the pf(q, df1, df2) function in R.</p>
 
-<p>Returns the value of x in the inverse of the cdf for the (Central) F distribution with numerator degrees of freedom df1 and denominator degrees of freedom df2.</p>
+<h4 id="jStat.centralF.inv">jStat.centralF.inv(p, df1, df2 )</h4>
+
+<p>Given p in [0, 1), returns the value of x for which the cumulative probability density of the central F distribution is p. That is, <code>jStat.centralF.inv(p, df1, df2) = x</code> if and only if <code>jStat.centralF.inv(x, df1, df2) = p</code>.</p>
+
+<p>This function corresponds to the <code>qf(p, df1, df2)</code> function in R.</p>
 
 <h4 id="jStat.centralF.mean">jStat.centralF.mean( df1, df2 )</h4>
 
-<p>Returns the mean of the (Central) F distribution with numerator degrees of freedom df1 and denominator degrees of freedom df2.</p>
+<p>Returns the mean of the (Central) F distribution.</p>
 
 <h4 id="jStat.centralF.mode">jStat.centralF.mode( df1, df2 )</h4>
 
-<p>Returns the mode of the (Central) F distribution with numerator degrees of freedom df1 and denominator degrees of freedom df2.</p>
+<p>Returns the mode of the (Central) F distribution.</p>
 
 <h4 id="jStat.centralF.sample">jStat.centralF.sample( df1, df2 )</h4>
 
-<p>Returns a random number whose distribution is the (Central) F distribution with numerator degrees of freedom df1 and denominator degrees of freedom df2.</p>
+<p>Returns a random number whose distribution is the (Central) F distribution.</p>
+
+<p>This function corresponds to the <code>rf(n, df1, df2)</code> function in R.</p>
 
 <h4 id="jStat.centralF.variance">jStat.centralF.variance( df1, df2 )</h4>
 
-<p>Returns the variance of the (Central) F distribution with numerator degrees of freedom df1 and denominator degrees of freedom df2.</p>
+<p>Returns the variance of the (Central) F distribution.</p>
 
 <h3 id="jStat.cauchy">jStat.cauchy( local, scale )</h3>
 
@@ -1670,6 +1823,17 @@ jStat.corrcoeff( seq, seq ) === 1;</code></pre>
 
 <p>Returns the value of the variance for the Student&#39;s T distribution with degrees of freedom dof.</p>
 
+<h3 id="jStat.tukey">jStat.tukey( nmeans, dof )</h3>
+
+<h4 id="jStat.tukey.cdf">jStat.tukey.cdf( q, nmeans, dof )</h4>
+
+<p>Returns the value of q in the cdf of the Studentized range distribution with number of groups nmeans and degrees of freedom dof.</p>
+
+<h4 id="jStat.tukey.inv">jStat.tukey.inv( p, nmeans, dof )</h4>
+
+<p>Returns the value of p in the inverse of the cdf for the Studentized range distribution with number of groups nmeans and degrees of freedom dof.
+Only accurate to 4 decimal places.</p>
+
 <h3 id="jStat.weibull">jStat.weibull( scale, shape )</h3>
 
 <h4 id="jStat.weibull.pdf">jStat.weibull.pdf( x, scale, shape )</h4>
@@ -1800,11 +1964,48 @@ jStat.corrcoeff( seq, seq ) === 1;</code></pre>
 
 <p>Returns the value of the mode of the Triangular distribution with the parameters a, b, and c.</p>
 
+<h4 id="jStat.triangular.sample">jStat.triangular.sample( a, b, c )</h4>
+
+<p>Returns a random number whose distribution is the Triangular distribution with the parameters a, b, and c.</p>
+
 <h4 id="jStat.triangular.variance">jStat.triangular.variance( a, b, c )</h4>
 
 <p>Returns the value of the variance of the Triangular distribution with the parameters a, b, and c.</p>
 
-<h2 id="special_Functions">Special Functions</h2>
+<h3 id="jStat.arcsine">jStat.arcsine( a, b )</h3>
+
+<h4 id="jStat.arcsine.pdf">jStat.arcsine.pdf( x, a, b )</h4>
+
+<p>Returns the value of x in the pdf of the arcsine distribution from a to b.</p>
+
+<h4 id="jStat.arcsine.cdf">jStat.arcsine.cdf( x, a, b )</h4>
+
+<p>Returns the value of x in the cdf of the arcsine distribution from a to b.</p>
+
+<h4 id="jStat.arcsine.inv">jStat.arcsine.inv(p, a, b)</h4>
+
+<p>Returns the inverse of the arcsine.cdf function; i.e. the value of x for which arcsine.cdf(x, a, b) == p.</p>
+
+<h4 id="jStat.arcsine.mean">jStat.arcsine.mean( a, b )</h4>
+
+<p>Returns the value of the mean of the arcsine distribution from a to b.</p>
+
+<h4 id="jStat.arcsine.median">jStat.arcsine.median( a, b )</h4>
+
+<p>Returns the value of the median of the arcsine distribution from a to b.</p>
+
+<h4 id="jStat.arcsine.mode">jStat.arcsine.mode( a, b )</h4>
+
+<p>Returns the value of the mode of the arcsine distribution from a to b.</p>
+
+<h4 id="jStat.arcsine.sample">jStat.arcsine.sample( a, b )</h4>
+
+<p>Returns a random number whose distribution is the arcsine distribution from a to b.</p>
+
+<h4 id="jStat.arcsine.variance">jStat.arcsine.variance( a, b )</h4>
+
+<p>Returns the variance of the Uniform distribution from a to b.
+## Special Functions</p>
 
 <h3 id="betafn">betafn( x, y )</h3>
 
@@ -1981,6 +2182,12 @@ the first row of the matrix will be used as the vector for angle().</p>
 
 <p>Take dot product of array 1 and array 2.</p>
 
+<h3 id="outer">outer( A, B )</h3>
+
+<p>Take outer product of A and B.</p>
+
+<pre><code>outer([1,2,3],[4,5,6]) === [[4,5,6],[8,10,12],[12,15,18]]</code></pre>
+
 <h3 id="pow">pow( arr, arg )</h3>
 
 <p>Raise all entries of the array to the power of arg</p>
@@ -2026,13 +2233,31 @@ not a jStat object.</p>
 
 <p>Performs Gauss-Jordan Elimination on matrix A augmented by matrix B.</p>
 
-<h3 id="lu">lu(A,B)</h3>
+<h3 id="lu">lu(A)</h3>
 
-<p>Performs the LU-Decomposition on matrix A.</p>
+<p>Perform the LU decomposition on matrix A.</p>
+
+<p>A -&gt; [L,U]</p>
+
+<p>st.</p>
+
+<p>A=LU</p>
+
+<p>L is lower triangular matrix</p>
+
+<p>U is upper triangular matrix</p>
 
 <h3 id="cholesky">cholesky(A)</h3>
 
 <p>Performs the Cholesky decomposition on matrix A.</p>
+
+<p>A -&gt; T</p>
+
+<p>st.</p>
+
+<p>A=TT&#39;</p>
+
+<p>T is lower triangular matrix</p>
 
 <h3 id="gauss_jacobi">gauss_jacobi(A,b,x,r)</h3>
 
@@ -2050,7 +2275,23 @@ not a jStat object.</p>
 
 <p>Performs the householder transformation on the matrix A.</p>
 
-<h3 id="qR">QR()</h3>
+<h3 id="qR">QR(A)</h3>
+
+<p>Performs the Cholesky decomposition on matrix A.</p>
+
+<p>A -&gt; [Q,R]</p>
+
+<p>Q is orthogonal matrix</p>
+
+<p>R is upper triangular</p>
+
+<h3 id="lstsq">lstsq(A,b)</h3>
+
+<p>solve least squard problem for Ax=b as QR decomposition way.</p>
+
+<p>if b is [[b1],[b2],[b3]] form will return [[x1],[x2],[x3]] array form solution.</p>
+
+<p>else b is [b1,b2,b3] form will return [x1,x2,x3] array form solution.</p>
 
 <h3 id="jacobi">jacobi()</h3>
 
@@ -2167,15 +2408,15 @@ defaults to a two sided t-test.</p>
 
 <h3 id="jStat.ttest">jStat.ttest( tscore, n, sides)</h3>
 
-<p>Returns the p-value of the t-score given the sample size n. Sides 
-is an integer value 1 or 2 denoting a one or two sided t-test. 
-If sides is not specified the test defaults to a two sided t-test. </p>
+<p>Returns the p-value of the t-score given the sample size n. Sides
+is an integer value 1 or 2 denoting a one or two sided t-test.
+If sides is not specified the test defaults to a two sided t-test.</p>
 
 <h3 id="jStat.ttest">jStat.ttest( value, array, sides)</h3>
 
 <p>Returns the p-value of the value given the data in the array.
-Sides is an integer value 1 or 2 denoting a one or two sided 
-t-test. If sides is not specified the test defaults to a two 
+Sides is an integer value 1 or 2 denoting a one or two sided
+t-test. If sides is not specified the test defaults to a two
 sided t-test.</p>
 
 <h2 id="f_Statistics">F Statistics</h2>
@@ -2197,6 +2438,52 @@ test on the arrays.</p>
 
 <p>Returns the p-value for the fscore with a numerator degress
 of freedom df1 and the denominator degrees of freedom df2</p>
+
+<h2 id="tukey_39_s_Range_Test">Tukey&#39;s Range Test</h2>
+
+<h3 id="jStat.qscore">jStat.qscore( mean1, mean2, n1, n2, sd )</h3>
+
+<p>Returns the q-score of a single pairwise comparison between arrays
+of mean mean1 and mean2, size n1 and n2, and standard deviation (of
+all vectors) sd.</p>
+
+<h3 id="jStat.qscore">jStat.qscore( array1, array2, sd )</h3>
+
+<p>Same as above, but the means and sizes are calculated automatically
+from the arrays.</p>
+
+<h3 id="jStat.qtest">jStat.qtest( qscore, n, k )</h3>
+
+<p>Returns the p-value of the q-score given the total sample size n
+and k number of populations.</p>
+
+<h3 id="jStat.qtest">jStat.qtest( mean1, mean2, n1, n2, sd, n, k )</h3>
+
+<p>Returns the p-value of a single pairwise comparison between arrays
+of mean mean1 and mean2, size n1 and n2, and standard deviation (of
+all vectors) sd, where the total sample size is n and the number of
+populations is k.</p>
+
+<h3 id="jStat.qtest">jStat.qtest( array1, array2, sd, n, k )</h3>
+
+<p>Same as above, but the means and sizes are calculated automatically
+from the arrays.</p>
+
+<h3 id="jStat.tukeyhsd">jStat.tukeyhsd( arrays )</h3>
+
+<p>Performs the full Tukey&#39;s range test returning p-values for every
+pairwise combination of the arrays in the format of
+<code>[[[index1, index2], pvalue], ...]</code></p>
+
+<p>For example:</p>
+
+<pre><code>&gt; jStat.tukeyhsd([[1, 2], [3, 4, 5], [6], [7, 8]])
+[ [ [ 0, 1 ], 0.10745283896120883 ],
+  [ [ 0, 2 ], 0.04374051946838586 ],
+  [ [ 0, 3 ], 0.007850804224287633 ],
+  [ [ 1, 2 ], 0.32191548545694226 ],
+  [ [ 1, 3 ], 0.03802747415485819 ],
+  [ [ 2, 3 ], 0.5528665999257486 ] ]</code></pre>
 
 <h2 id="confidence_Intervals">Confidence Intervals</h2>
 
@@ -2239,6 +2526,7 @@ first sample and n2 is the sample size for the second sample.</p>
 	</div>
 	<script src="assets/sh_main.js"></script>
 	<script src="assets/sh_javascript.min.js"></script>
+	<script src="//cdn.jsdelivr.net/jstat/latest/jstat.min.js"></script>
 	<script>highlight(undefined, undefined, 'pre');</script>
 </body>
 </html>

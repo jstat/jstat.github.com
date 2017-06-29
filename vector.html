@@ -15,7 +15,7 @@
       </div>
       <hr />
     </header>
-	<div id="toc"><h2>Table Of Contents</h2><ul><li><a href="#vector_Functionality">Vector Functionality</a><ul><li><a href="#sum">sum()</a></li><li><a href="#sumsqrd">sumsqrd()</a></li><li><a href="#sumsqerr">sumsqerr()</a></li><li><a href="#sumrow">sumrow()</a></li><li><a href="#product">product()</a></li><li><a href="#min">min()</a></li><li><a href="#max">max()</a></li><li><a href="#mean">mean()</a></li><li><a href="#meansqerr">meansqerr()</a></li><li><a href="#geomean">geomean()</a></li><li><a href="#median">median()</a></li><li><a href="#cumsum">cumsum()</a></li><li><a href="#cumprod">cumprod()</a></li><li><a href="#diff">diff()</a></li><li><a href="#mode">mode()</a></li><li><a href="#range">range()</a></li><li><a href="#variance">variance()</a></li><li><a href="#stdev">stdev()</a></li><li><a href="#meandev">meandev()</a></li><li><a href="#meddev">meddev()</a></li><li><a href="#skewness">skewness()</a></li><li><a href="#kurtosis">kurtosis()</a></li><li><a href="#coeffvar">coeffvar()</a></li><li><a href="#quartiles">quartiles()</a></li><li><a href="#quantiles">quantiles()</a></li><li><a href="#percentile">percentile()</a></li><li><a href="#percentileOfScore">percentileOfScore()</a></li><li><a href="#histogram">histogram()</a></li><li><a href="#covariance">covariance()</a></li><li><a href="#corrcoeff">corrcoeff()</a></li></ul></li></ul><hr /></div>
+	<div id="toc"><h2>Table Of Contents</h2><ul><li><a href="#vector_Functionality">Vector Functionality</a><ul><li><a href="#sum">sum()</a></li><li><a href="#sumsqrd">sumsqrd()</a></li><li><a href="#sumsqerr">sumsqerr()</a></li><li><a href="#sumrow">sumrow()</a></li><li><a href="#product">product()</a></li><li><a href="#min">min()</a></li><li><a href="#max">max()</a></li><li><a href="#mean">mean()</a></li><li><a href="#meansqerr">meansqerr()</a></li><li><a href="#geomean">geomean()</a></li><li><a href="#median">median()</a></li><li><a href="#cumsum">cumsum()</a></li><li><a href="#cumprod">cumprod()</a></li><li><a href="#diff">diff()</a></li><li><a href="#rank">rank()</a></li><li><a href="#mode">mode()</a></li><li><a href="#range">range()</a></li><li><a href="#variance">variance()</a></li><li><a href="#pooledvariance">pooledvariance()</a></li><li><a href="#deviation">deviation()</a></li><li><a href="#stdev">stdev()</a></li><li><a href="#pooledstdev">pooledstdev()</a></li><li><a href="#meandev">meandev()</a></li><li><a href="#meddev">meddev()</a></li><li><a href="#skewness">skewness()</a></li><li><a href="#kurtosis">kurtosis()</a></li><li><a href="#coeffvar">coeffvar()</a></li><li><a href="#quartiles">quartiles()</a></li><li><a href="#quantiles">quantiles()</a></li><li><a href="#percentile">percentile()</a></li><li><a href="#percentileOfScore">percentileOfScore()</a></li><li><a href="#histogram">histogram()</a></li><li><a href="#covariance">covariance()</a></li><li><a href="#corrcoeff">corrcoeff()</a></li></ul></li></ul><hr /></div>
 <h2 id="vector_Functionality">Vector Functionality</h2>
 
 <h3 id="sum">sum()</h3>
@@ -452,6 +452,37 @@ jStat([[1,2],[3,4],[1,4]]).diff() === [[2,-2],[2,0]]</code></pre>
     // result === [0,2]
 });</code></pre>
 
+<h3 id="rank">rank()</h3>
+
+<p><strong>rank( array )</strong></p>
+
+<p>Return an array of the ranks of the array.</p>
+
+<pre><code>jStat.rank([1, 2, 2, 3]) === [1, 2.5, 2.5, 4]</code></pre>
+
+<p><strong>fn.rank( [bool][,callback] )</strong></p>
+
+<p>Return an array of ranks for a vector or matrix columns.</p>
+
+<pre><code>jStat([1, 2, 2, 3]).rank() === [1, 2.5, 2.5, 4]
+jStat([[1, 2], [3, 4], [1, 4]]).rank() === [[1.5, 3, 1.5], [1, 2.5, 2.5]]</code></pre>
+
+<p>If callback is passed then will pass result as first argument.</p>
+
+<pre><code>jStat([[1, 2], [3, 4], [1, 4]]).rank(function( result ) {
+    // result === [[1.5, 3, 1.5], [1, 2.5, 2.5]]
+});</code></pre>
+
+<p>If pass boolean true as first argument, then return rank for the whole matrix.</p>
+
+<pre><code>jStat([[1, 2], [3, 4], [1, 4]]).rank(true) === [2, 5, 2, 5, 2, 5]</code></pre>
+
+<p>And the two can be combined.</p>
+
+<pre><code>jStat([[1, 2], [3, 4], [1, 4]]).rank(true, function( result ) {
+    // result === [2, 5, 2, 5, 2, 5]
+});</code></pre>
+
 <h3 id="mode">mode()</h3>
 
 <p><strong>mode( array )</strong></p>
@@ -548,6 +579,46 @@ jStat([[1,2],[3,4]]).variance() === [1,1]</code></pre>
     // result === 0.140625
 });</code></pre>
 
+<h3 id="pooledvariance">pooledvariance()</h3>
+
+<p><strong>pooledvariance( arrays )</strong></p>
+
+<p>Return the pooled (sample) variance of an array of vectors.
+Assumes the population variance of the vectors are the same.</p>
+
+<pre><code>jStat.pooledvariance([[1,2],[3,4]]) === 0.5</code></pre>
+
+<h3 id="deviation">deviation()</h3>
+
+<p><strong>deviation( array )</strong></p>
+
+<p>Return the deviation of a vector.</p>
+
+<pre><code>jStat.deviation([1,2,3,4]) === [-1.5, -0.5, 0.5, 1.5]</code></pre>
+
+<p><strong>fn.deviation( [bool][,callback] )</strong></p>
+
+<p>Return the deviation for a vector or matrix columns.</p>
+
+<pre><code>jStat([1,2,3,4]).deviation() === [-1.5, -0.5, 0.5, 1.5]
+jStat([[1,2],[3,4]]).deviation() === [[-1,1],[-1,1]]</code></pre>
+
+<p>If callback is passed then will pass result as first argument.</p>
+
+<pre><code>jStat( 1, 4, 4 ).deviation(function( result ) {
+    // result === [-1.5, -0.5, 0.5, 1.5]
+});</code></pre>
+
+<p>If pass boolean true as first argument, then return variance of the matrix.</p>
+
+<pre><code>jStat([[1,2],[3,5]]).deviation( true ) === [-0.5, 0.5, -1, 1]</code></pre>
+
+<p>And the two can be combined.</p>
+
+<pre><code>jStat([[1,2],[3,5]]).deviation(true,function( result ) {
+    // result === [-0.5, 0.5, -1, 1]
+});</code></pre>
+
 <h3 id="stdev">stdev()</h3>
 
 <p><strong>stdev( array[,flag])</strong></p>
@@ -591,6 +662,15 @@ jStat( 1, 4, 4 ).stdev(true,function( result ) {
 <pre><code>jStat([[1,2],[3,5]]).stdev(true,function( result ) {
     // result === 0.25
 });</code></pre>
+
+<h3 id="pooledstdev">pooledstdev()</h3>
+
+<p><strong>pooledstdev( arrays )</strong></p>
+
+<p>Return the pooled (sample) standard deviation of an array of vectors.
+Assumes the population standard deviation of the vectors are the same.</p>
+
+<pre><code>jStat.pooledstdev([[1,2],[3,4]]) === 0.707...</code></pre>
 
 <h3 id="meandev">meandev()</h3>
 
@@ -783,9 +863,17 @@ jStat.covariance( seq, seq ) === 11;</code></pre>
 
 <pre><code>var seq = jStat.seq( 0, 10, 11 );
 jStat.corrcoeff( seq, seq ) === 1;</code></pre>
+
+<p><strong>spearmancoeff( array, array )</strong></p>
+
+<p>Return the rank correlation coefficient of two vectors (Spearman&#39;s Rho).</p>
+
+<pre><code>jStat.spearmancoeff([1, 2, 3, 4], [5, 6, 9, 7]) == 0.8;
+jStat.spearmancoeff([1, 2, 2, 4], [5, 2, 5, 7]) == 0.5;</code></pre>
 	</div>
 	<script src="assets/sh_main.js"></script>
 	<script src="assets/sh_javascript.min.js"></script>
+	<script src="//cdn.jsdelivr.net/jstat/latest/jstat.min.js"></script>
 	<script>highlight(undefined, undefined, 'pre');</script>
 </body>
 </html>
