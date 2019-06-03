@@ -9,7 +9,7 @@
 <body>
 	<div id="container">
     <header>
-      <h1>jStat v1.7.1 Documentation</h1>
+      <h1>jStat v1.7.2 Documentation</h1>
       <div id="gtoc">
         <p><a href="index.html">Index</a> | <a href="all.html">View on single page</a></p>
       </div>
@@ -22,13 +22,13 @@
 
 <p><strong>sum( array )</strong></p>
 
-<p>Return the sum of a vector.</p>
+<p>Returns the sum of the <code>array</code> vector.</p>
 
 <pre><code>jStat.sum([1,2,3]) === 6</code></pre>
 
-<p><strong>fn.sum( [bool][,callback] )</strong></p>
+<p><strong>fn.sum( [bool][, callback] )</strong></p>
 
-<p>Return the sum of a vector or matrix columns.</p>
+<p>Returns the sum of a vector or matrix columns.</p>
 
 <pre><code>jStat( 1, 5, 5 ).sum() === 15
 jStat([[1,2],[3,4]]).sum() === [ 4, 6 ]</code></pre>
@@ -45,7 +45,7 @@ jStat([[1,2],[3,4]]).sum() === [ 4, 6 ]</code></pre>
 
 <p>And the two can be combined.</p>
 
-<pre><code>jStat([[1,2],[3,4]]).sum(true,function( result ) {
+<pre><code>jStat([[1,2],[3,4]]).sum(true, function( result ) {
     // result === 10
 });</code></pre>
 
@@ -53,13 +53,13 @@ jStat([[1,2],[3,4]]).sum() === [ 4, 6 ]</code></pre>
 
 <p><strong>sumsqrd( array )</strong></p>
 
-<p>Return the sum squared of a vector.</p>
+<p>Returns the sum squared of the <code>array</code> vector.</p>
 
 <pre><code>jStat.sumsqrd([1,2,3]) === 14</code></pre>
 
-<p><strong>fn.sumsqrd( [bool][,callback] )</strong></p>
+<p><strong>fn.sumsqrd( [bool][, callback] )</strong></p>
 
-<p>Return the sum squared of a vector or matrix columns.</p>
+<p>Returns the sum squared of a vector or matrix columns.</p>
 
 <pre><code>jStat( 1, 5, 5 ).sumsqrd() === 55
 jStat([[1,2],[3,4]]).sumsqrd() === [ 10, 20 ]</code></pre>
@@ -84,13 +84,13 @@ jStat([[1,2],[3,4]]).sumsqrd() === [ 10, 20 ]</code></pre>
 
 <p><strong>sumsqerr( array )</strong></p>
 
-<p>Return the sum of squared errors of prediction of a vector.</p>
+<p>Returns the sum of squared errors of prediction of the <code>array</code> vector.</p>
 
 <pre><code>jStat.sumsqerr([1,2,3]) === 2</code></pre>
 
-<p><strong>fn.sumsqerr( [bool][,callback] )</strong></p>
+<p><strong>fn.sumsqerr( [bool][, callback] )</strong></p>
 
-<p>Return the sum of squared errors of prediction of a vector or matrix columns.</p>
+<p>Returns the sum of squared errors of prediction of a vector or matrix columns.</p>
 
 <pre><code>jStat( 1, 5, 5 ).sumsqerr() === 10
 jStat([[1,2],[3,4]]).sumsqerr() === [ 2, 2 ]</code></pre>
@@ -115,13 +115,13 @@ jStat([[1,2],[3,4]]).sumsqerr() === [ 2, 2 ]</code></pre>
 
 <p><strong>sumrow( array )</strong></p>
 
-<p>Return the sum of a vector in row-based order.</p>
+<p>Returns the sum of the <code>array</code> vector in row-based order.</p>
 
 <pre><code>jStat.sumrow([1,2,3]) === 6</code></pre>
 
-<p><strong>fn.sumrow( [bool][,callback] )</strong></p>
+<p><strong>fn.sumrow( [bool][, callback] )</strong></p>
 
-<p>Return the sum of a vector or matrix rows.</p>
+<p>Returns the sum of a vector or matrix rows.</p>
 
 <pre><code>jStat( 1, 5, 5 ).sumrow() === 15
 jStat([[1,2],[3,4]]).sumrow() === [ 3, 7 ]</code></pre>
@@ -146,13 +146,13 @@ jStat([[1,2],[3,4]]).sumrow() === [ 3, 7 ]</code></pre>
 
 <p><strong>product( array )</strong></p>
 
-<p>Return the product of a vector.</p>
+<p>Returns the product of the <code>array</code> vector.</p>
 
 <pre><code>jStat.product([1,2,3]) === 6</code></pre>
 
-<p><strong>fn.product( [bool][,callback] )</strong></p>
+<p><strong>fn.product( [bool][, callback] )</strong></p>
 
-<p>Return the product of a vector or matrix columns.</p>
+<p>Returns the product of a vector or matrix columns.</p>
 
 <pre><code>jStat( 1, 5, 5 ).product() === 120
 jStat([[1,2],[3,4]]).product() === [ 3, 8 ]</code></pre>
@@ -177,13 +177,13 @@ jStat([[1,2],[3,4]]).product() === [ 3, 8 ]</code></pre>
 
 <p><strong>min( array )</strong></p>
 
-<p>Return the minimum value of a vector.</p>
+<p>Returns the minimum value of the <code>array</code> vector.</p>
 
 <pre><code>jStat.min([1,2,3]) === 1</code></pre>
 
-<p><strong>fn.min( [bool][,callback] )</strong></p>
+<p><strong>fn.min( [bool][, callback] )</strong></p>
 
-<p>Return the minimum value of a vector or matrix columns.</p>
+<p>Returns the minimum value of a vector or matrix columns.</p>
 
 <pre><code>jStat( 1, 5, 5 ).min() === 1
 jStat([[1,2],[3,4]]).min() === [ 1, 2 ]</code></pre>
@@ -208,13 +208,13 @@ jStat([[1,2],[3,4]]).min() === [ 1, 2 ]</code></pre>
 
 <p><strong>max( array )</strong></p>
 
-<p>Return the maximum value of a vector.</p>
+<p>Returns the maximum value of the <code>array</code> vector.</p>
 
 <pre><code>jStat.max([1,2,3]) === 3</code></pre>
 
-<p><strong>fn.max( [bool][,callback] )</strong></p>
+<p><strong>fn.max( [bool][, callback] )</strong></p>
 
-<p>Return the maximum value of a vector or matrix columns.</p>
+<p>Returns the maximum value of a vector or matrix columns.</p>
 
 <pre><code>jStat( 1, 5, 5 ).max() === 5
 jStat([[1,2],[3,4]]).max() === [ 3, 4 ]</code></pre>
@@ -239,13 +239,13 @@ jStat([[1,2],[3,4]]).max() === [ 3, 4 ]</code></pre>
 
 <p><strong>mean( array )</strong></p>
 
-<p>Return the mean of a vector.</p>
+<p>Returns the mean of the <code>array</code> vector.</p>
 
 <pre><code>jStat.mean([1,2,3]) === 2</code></pre>
 
 <p><strong>fn.max( [bool,][callback] )</strong></p>
 
-<p>Return the mean of a vector or matrix columns.</p>
+<p>Returns the mean of a vector or matrix columns.</p>
 
 <pre><code>jStat( 1, 5, 5 ).mean() === 3
 jStat([[1,2],[3,4]]).mean() === [ 2, 3 ]</code></pre>
@@ -270,13 +270,13 @@ jStat([[1,2],[3,4]]).mean() === [ 2, 3 ]</code></pre>
 
 <p><strong>meansqerr( array )</strong></p>
 
-<p>Return the mean squared error of a vector.</p>
+<p>Returns the mean squared error of the <code>array</code> vector.</p>
 
 <pre><code>jStat.meansqerr([1,2,3]) === 0.66666...</code></pre>
 
-<p><strong>fn.meansqerr( [bool][,callback] )</strong></p>
+<p><strong>fn.meansqerr( [bool][, callback] )</strong></p>
 
-<p>Return the mean squared error of a vector or matrix columns.</p>
+<p>Returns the mean squared error of a vector or matrix columns.</p>
 
 <pre><code>jStat( 1, 5, 5 ).meansqerr() === 2
 jStat([[1,2],[3,4]]).meansqerr() === [ 1, 1 ]</code></pre>
@@ -301,13 +301,13 @@ jStat([[1,2],[3,4]]).meansqerr() === [ 1, 1 ]</code></pre>
 
 <p><strong>geomean( array )</strong></p>
 
-<p>Return the geometric mean of a vector.</p>
+<p>Returns the geometric mean of the <code>array</code> vector.</p>
 
 <pre><code>jStat.geomean([4,1,1/32]) === 0.5</code></pre>
 
-<p><strong>fn.geomean( [bool][,callback] )</strong></p>
+<p><strong>fn.geomean( [bool][, callback] )</strong></p>
 
-<p>Return the geometric mean of a vector or matrix columns.</p>
+<p>Returns the geometric mean of a vector or matrix columns.</p>
 
 <pre><code>jStat([4,1,1\32]).geomean() === 0.5
 jStat([[1,2],[3,4]]).geomean() === [ 1.732..., 2.828... ]</code></pre>
@@ -332,13 +332,13 @@ jStat([[1,2],[3,4]]).geomean() === [ 1.732..., 2.828... ]</code></pre>
 
 <p><strong>median( array )</strong></p>
 
-<p>Return the median of a vector.</p>
+<p>Returns the median of the <code>array</code> vector.</p>
 
 <pre><code>jStat.median([1,2,3]) === 2</code></pre>
 
-<p><strong>fn.median( [bool][,callback] )</strong></p>
+<p><strong>fn.median( [bool][, callback] )</strong></p>
 
-<p>Return the median of a vector or matrix columns.</p>
+<p>Returns the median of a vector or matrix columns.</p>
 
 <pre><code>jStat( 1, 5, 5 ).median() === 3
 jStat([[1,2],[3,4]]).median() === [ 2, 3 ]</code></pre>
@@ -363,13 +363,13 @@ jStat([[1,2],[3,4]]).median() === [ 2, 3 ]</code></pre>
 
 <p><strong>cumsum( array )</strong></p>
 
-<p>Return an array of partial sums in the sequence.</p>
+<p>Returns an array of partial sums in the sequence.</p>
 
 <pre><code>jStat.cumsum([1,2,3]) === [1,3,6]</code></pre>
 
-<p><strong>fn.cumsum( [bool][,callback] )</strong></p>
+<p><strong>fn.cumsum( [bool][, callback] )</strong></p>
 
-<p>Return an array of partial sums for a vector or matrix columns.</p>
+<p>Returns an array of partial sums for a vector or matrix columns.</p>
 
 <pre><code>jStat( 1, 5, 5 ).cumsum() === [1,3,6,10,15]
 jStat([[1,2],[3,4]]).cumsum() === [[1,4],[2,6]]</code></pre>
@@ -394,13 +394,13 @@ jStat([[1,2],[3,4]]).cumsum() === [[1,4],[2,6]]</code></pre>
 
 <p><strong>cumprod( array )</strong></p>
 
-<p>Return an array of partial products in the sequence.</p>
+<p>Returns an array of partial products in the sequence.</p>
 
 <pre><code>jStat.cumprod([2,3,4]) === [2,6,24]</code></pre>
 
-<p><strong>fn.cumprod( [bool][,callback] )</strong></p>
+<p><strong>fn.cumprod( [bool][, callback] )</strong></p>
 
-<p>Return an array of partial products for a vector or matrix columns.</p>
+<p>Returns an array of partial products for a vector or matrix columns.</p>
 
 <pre><code>jStat( 1, 5, 5 ).cumprod() === [1,2,6,24,120]
 jStat([[1,2],[3,4]]).cumprod() === [[1,3],[2,8]]</code></pre>
@@ -425,13 +425,13 @@ jStat([[1,2],[3,4]]).cumprod() === [[1,3],[2,8]]</code></pre>
 
 <p><strong>diff( array )</strong></p>
 
-<p>Return an array of the successive differences of the array.</p>
+<p>Returns an array of the successive differences of the array.</p>
 
 <pre><code>jStat.diff([1,2,2,3]) === [1,0,1]</code></pre>
 
-<p><strong>fn.diff( [bool][,callback] )</strong></p>
+<p><strong>fn.diff( [bool][, callback] )</strong></p>
 
-<p>Return an array of successive differences for a vector or matrix columns.</p>
+<p>Returns an array of successive differences for a vector or matrix columns.</p>
 
 <pre><code>jStat([1,2,2,3]).diff() === [1,0,1]
 jStat([[1,2],[3,4],[1,4]]).diff() === [[2,-2],[2,0]]</code></pre>
@@ -456,13 +456,13 @@ jStat([[1,2],[3,4],[1,4]]).diff() === [[2,-2],[2,0]]</code></pre>
 
 <p><strong>rank( array )</strong></p>
 
-<p>Return an array of the ranks of the array.</p>
+<p>Returns an array of the ranks of the array.</p>
 
 <pre><code>jStat.rank([1, 2, 2, 3]) === [1, 2.5, 2.5, 4]</code></pre>
 
-<p><strong>fn.rank( [bool][,callback] )</strong></p>
+<p><strong>fn.rank( [bool][, callback] )</strong></p>
 
-<p>Return an array of ranks for a vector or matrix columns.</p>
+<p>Returns an array of ranks for a vector or matrix columns.</p>
 
 <pre><code>jStat([1, 2, 2, 3]).rank() === [1, 2.5, 2.5, 4]
 jStat([[1, 2], [3, 4], [1, 4]]).rank() === [[1.5, 3, 1.5], [1, 2.5, 2.5]]</code></pre>
@@ -487,15 +487,15 @@ jStat([[1, 2], [3, 4], [1, 4]]).rank() === [[1.5, 3, 1.5], [1, 2.5, 2.5]]</code>
 
 <p><strong>mode( array )</strong></p>
 
-<p>Return the mode of a vector.
+<p>Returns the mode of the <code>array</code> vector.
 If there are multiple modes then <code>mode()</code> will return all of them.</p>
 
 <pre><code>jStat.mode([1,2,2,3]) === 2
 jStat.mode([1,2,3]) === [1,2,3]</code></pre>
 
-<p><strong>fn.mode( [bool][,callback] )</strong></p>
+<p><strong>fn.mode( [bool][, callback] )</strong></p>
 
-<p>Return the mode for a vector or matrix columns.</p>
+<p>Returns the mode for a vector or matrix columns.</p>
 
 <pre><code>jStat([1,2,2,3]).mode() === 2
 jStat([[1,2],[3,4],[1,4]]).mode() === [1,4]</code></pre>
@@ -515,13 +515,13 @@ dimensional.</p>
 
 <p><strong>range( array )</strong></p>
 
-<p>Return the range of a vector</p>
+<p>Returns the range of the <code>array</code> vector.</p>
 
 <pre><code>jStat.range([1,2,3]) === 2</code></pre>
 
-<p><strong>fn.range( [bool][,callback] )</strong></p>
+<p><strong>fn.range( [bool][, callback] )</strong></p>
 
-<p>Return the range for a vector or matrix columns.</p>
+<p>Returns the range for a vector or matrix columns.</p>
 
 <pre><code>jStat([1,2,3]).range() === 2
 jStat([[1,2],[3,4]]).range() === [2,2]</code></pre>
@@ -544,18 +544,18 @@ jStat([[1,2],[3,4]]).range() === [2,2]</code></pre>
 
 <h3 id="variance">variance()</h3>
 
-<p><strong>variance( array[,flag])</strong></p>
+<p><strong>variance( array[, flag] )</strong></p>
 
-<p>Return the variance of a vector.
+<p>Returns the variance of the <code>array</code> vector.
 By default, the population variance is calculated.
-Passing true as the flag indicates computes the sample variance instead.</p>
+Passing <code>true</code> to <code>flag</code> indicates to compute the sample variance instead.</p>
 
 <pre><code>jStat.variance([1,2,3,4]) === 1.25
 jStat.variance([1,2,3,4],true) === 1.66666...</code></pre>
 
-<p><strong>fn.variance( [bool][,callback] )</strong></p>
+<p><strong>fn.variance( [bool][, callback] )</strong></p>
 
-<p>Return the variance for a vector or matrix columns.</p>
+<p>Returns the variance for a vector or matrix columns.</p>
 
 <p><strong>Note:</strong> Cannot pass flag to indicate between population or sample for matrices.
 There is a feature request for this on <a href="https://github.com/jstat/jstat/issues/51">Issue #51</a>.</p>
@@ -583,7 +583,7 @@ jStat([[1,2],[3,4]]).variance() === [1,1]</code></pre>
 
 <p><strong>pooledvariance( arrays )</strong></p>
 
-<p>Return the pooled (sample) variance of an array of vectors.
+<p>Returns the pooled (sample) variance of an array of vectors.
 Assumes the population variance of the vectors are the same.</p>
 
 <pre><code>jStat.pooledvariance([[1,2],[3,4]]) === 0.5</code></pre>
@@ -592,13 +592,13 @@ Assumes the population variance of the vectors are the same.</p>
 
 <p><strong>deviation( array )</strong></p>
 
-<p>Return the deviation of a vector.</p>
+<p>Returns the deviation of the <code>array</code> vector.</p>
 
 <pre><code>jStat.deviation([1,2,3,4]) === [-1.5, -0.5, 0.5, 1.5]</code></pre>
 
-<p><strong>fn.deviation( [bool][,callback] )</strong></p>
+<p><strong>fn.deviation( [bool][, callback] )</strong></p>
 
-<p>Return the deviation for a vector or matrix columns.</p>
+<p>Returns the deviation for a vector or matrix columns.</p>
 
 <pre><code>jStat([1,2,3,4]).deviation() === [-1.5, -0.5, 0.5, 1.5]
 jStat([[1,2],[3,4]]).deviation() === [[-1,1],[-1,1]]</code></pre>
@@ -621,11 +621,11 @@ jStat([[1,2],[3,4]]).deviation() === [[-1,1],[-1,1]]</code></pre>
 
 <h3 id="stdev">stdev()</h3>
 
-<p><strong>stdev( array[,flag])</strong></p>
+<p><strong>stdev( array[, flag] )</strong></p>
 
-<p>Return the standard deviation of a vector.
-By defaut, the population standard deviation is returned.
-Passing true for the flag parameter returns the sample standard deviation.</p>
+<p>Returns the standard deviation of the <code>array</code> vector.
+By default, the population standard deviation is returned.
+Passing <code>true</code> to <code>flag</code> returns the sample standard deviation.</p>
 
 <p>The &#39;sample&#39; standard deviation is also called the &#39;corrected standard deviation&#39;, and is an unbiased estimator of the population standard deviation.
 The population standard deviation is also the &#39;uncorrected standard deviation&#39;, and is a biased but minimum-mean-squared-error estimator.</p>
@@ -633,11 +633,11 @@ The population standard deviation is also the &#39;uncorrected standard deviatio
 <pre><code>jStat.stdev([1,2,3,4]) === 1.118...
 jStat.stdev([1,2,3,4],true) === 1.290...</code></pre>
 
-<p><strong>fn.stdev( [bool][,callback] )</strong></p>
+<p><strong>fn.stdev( [bool][, callback] )</strong></p>
 
-<p>Return the standard deviation for a vector or matrix columns.</p>
+<p>Returns the standard deviation for a vector or matrix columns.</p>
 
-<p><strong>Note:</strong> Cannot pass flag to indicate between population or sample for matrices.
+<p><strong>Note:</strong> Cannot pass <code>flag</code> to indicate between population or sample for matrices.
 There is a feature request for this on <a href="https://github.com/jstat/jstat/issues/51">Issue #51</a>.</p>
 
 <pre><code>jStat([1,2,3,4]).stdev() === 1.118...
@@ -667,7 +667,7 @@ jStat( 1, 4, 4 ).stdev(true,function( result ) {
 
 <p><strong>pooledstdev( arrays )</strong></p>
 
-<p>Return the pooled (sample) standard deviation of an array of vectors.
+<p>Returns the pooled (sample) standard deviation of an array of vectors.
 Assumes the population standard deviation of the vectors are the same.</p>
 
 <pre><code>jStat.pooledstdev([[1,2],[3,4]]) === 0.707...</code></pre>
@@ -676,13 +676,13 @@ Assumes the population standard deviation of the vectors are the same.</p>
 
 <p><strong>meandev( array )</strong></p>
 
-<p>Return the mean absolute deviation of a vector.</p>
+<p>Returns the mean absolute deviation of the <code>array</code> vector.</p>
 
 <pre><code>jStat.meandev([1,2,3,4]) === 1</code></pre>
 
-<p><strong>fn.meandev( [bool][,callback] )</strong></p>
+<p><strong>fn.meandev( [bool][, callback] )</strong></p>
 
-<p>Return the mean absolute deviation for a vector or matrix columns.</p>
+<p>Returns the mean absolute deviation for a vector or matrix columns.</p>
 
 <pre><code>jStat([1,2,3,4]).meandev() === 1
 jStat([[1,2],[3,4]]).meandev() === [1,1]</code></pre>
@@ -707,13 +707,13 @@ jStat([[1,2],[3,4]]).meandev() === [1,1]</code></pre>
 
 <p><strong>meddev( array )</strong></p>
 
-<p>Return the median absolute deviation of a vector.</p>
+<p>Returns the median absolute deviation of the <code>array</code> vector.</p>
 
 <pre><code>jStat.meddev([1,2,3,4]) === 1</code></pre>
 
-<p><strong>fn.meddev( [bool][,callback] )</strong></p>
+<p><strong>fn.meddev( [bool][, callback] )</strong></p>
 
-<p>Return the median absolute deviation for a vector or matrix columns.</p>
+<p>Returns the median absolute deviation for a vector or matrix columns.</p>
 
 <pre><code>jStat([1,2,3,4]).meddev() === 1
 jStat([[1,2],[3,4]]).meddev() === [1,1]</code></pre>
@@ -738,7 +738,7 @@ jStat([[1,2],[3,4]]).meddev() === [1,1]</code></pre>
 
 <p><strong>skewness( array )</strong></p>
 
-<p>Return the skewness of a vector (third standardized moment).</p>
+<p>Returns the skewness of the <code>array</code> vector (third standardized moment).</p>
 
 <pre><code>jStat.skewness([1,2,2,3,5]) === 0.75003...</code></pre>
 
@@ -746,7 +746,7 @@ jStat([[1,2],[3,4]]).meddev() === [1,1]</code></pre>
 
 <p><strong>kurtosis( array )</strong></p>
 
-<p>Return the excess kurtosis of a vector (fourth standardized moment - 3).</p>
+<p>Returns the excess kurtosis of the <code>array</code> vector (fourth standardized moment - 3).</p>
 
 <pre><code>jStat.kurtosis([1,2,3,4]) === -0.63610...</code></pre>
 
@@ -754,13 +754,13 @@ jStat([[1,2],[3,4]]).meddev() === [1,1]</code></pre>
 
 <p><strong>coeffvar( array )</strong></p>
 
-<p>Return the coefficient of variation of a vector.</p>
+<p>Returns the coefficient of variation of the <code>array</code> vector.</p>
 
 <pre><code>jStat.coeffvar([1,2,3,4]) === 0.447...</code></pre>
 
-<p><strong>fn.coeffvar( [bool][,callback] )</strong></p>
+<p><strong>fn.coeffvar( [bool][, callback] )</strong></p>
 
-<p>Return the coefficient of variation for a vector or matrix columns.</p>
+<p>Returns the coefficient of variation for a vector or matrix columns.</p>
 
 <pre><code>jStat([1,2,3,4]).coeffvar() === 0.447...
 jStat([[1,2],[3,4]]).coeffvar() === [0.5,0.333...]</code></pre>
@@ -785,13 +785,13 @@ jStat([[1,2],[3,4]]).coeffvar() === [0.5,0.333...]</code></pre>
 
 <p><strong>quartiles( array )</strong></p>
 
-<p>Return the quartiles of a vector.</p>
+<p>Returns the quartiles of the <code>array</code> vector.</p>
 
 <pre><code>jStat.quartiles( jStat.seq(1,100,100)) === [25,50,75]</code></pre>
 
 <p><strong>fn.quartiles( [callback] )</strong></p>
 
-<p>Return the quartiles for a vector or matrix columns.</p>
+<p>Returns the quartiles for a vector or matrix columns.</p>
 
 <pre><code>jStat(1,100,100).quartiles() === [25,50,75]
 jStat(1,100,100,function( x ) {
@@ -806,9 +806,9 @@ jStat(1,100,100,function( x ) {
 
 <h3 id="quantiles">quantiles()</h3>
 
-<p><strong>quantiles( dataArray, quantilesArray, [alphap[, betap]] )</strong></p>
+<p><strong>quantiles( dataArray, quantilesArray[, alphap[, betap]] )</strong></p>
 
-<p>Like quartiles, but calculate and return arbitrary quantiles of a vector
+<p>Like quartiles, but calculate and return arbitrary quantiles of the <code>dataArray</code> vector
 or matrix (column-by-column).</p>
 
 <pre><code>jStat.quantiles([1, 2, 3, 4, 5, 6],
@@ -822,7 +822,7 @@ documentation.</p>
 
 <p><strong>percentile( dataArray, k )</strong></p>
 
-<p>Return the k-th percentile of values in a range, where k is in the range 0..1, exclusive.</p>
+<p>Returns the k-th percentile of values in the <code>dataArray</code> range, where k is in the range 0..1, exclusive.</p>
 
 <pre><code> jStat.percentile([1, 2, 3, 4], 0.3) === 1.9;</code></pre>
 
@@ -831,42 +831,42 @@ documentation.</p>
 <p><strong>percentileOfScore( dataArray, score[, kind] )</strong></p>
 
 <p>The percentile rank of score in a given array. Returns the percentage
-of all values in the input array that are less than (if <code>kind == &#39;strict&#39;</code>) or
+of all values in <code>dataArray</code> that are less than (if <code>kind == &#39;strict&#39;</code>) or
 less or equal than (if <code>kind == &#39;weak&#39;</code>) score. Default is <code>&#39;weak&#39;</code>.</p>
 
 <pre><code> jStat.percentileOfScore([1, 2, 3, 4, 5, 6], 3), 0.5, &#39;weak&#39;) === 0.5;</code></pre>
 
 <h3 id="histogram">histogram()</h3>
 
-<p><strong>histogram( dataArray, [numBins] )</strong></p>
+<p><strong>histogram( dataArray[, numBins] )</strong></p>
 
-<p>The histogram data defined as the number of dataArray elements found in
-equally sized bins across the range of dataArray. Default number
+<p>The histogram data defined as the number of <code>dataArray</code> elements found in
+equally sized bins across the range of <code>dataArray</code>. Default number
 of bins is 4.</p>
 
 <pre><code> jStat.histogram([100, 101, 102, 230, 304, 305, 400], 3) === [3, 1, 3];</code></pre>
 
 <h3 id="covariance">covariance()</h3>
 
-<p><strong>covariance( array, array )</strong></p>
+<p><strong>covariance( array1, array2 )</strong></p>
 
-<p>Return the covariance of two vectors.</p>
+<p>Returns the covariance of the <code>array1</code> and <code>array2</code> vectors.</p>
 
 <pre><code>var seq = jStat.seq( 0, 10, 11 );
 jStat.covariance( seq, seq ) === 11;</code></pre>
 
 <h3 id="corrcoeff">corrcoeff()</h3>
 
-<p><strong>corrcoeff( array, array )</strong></p>
+<p><strong>corrcoeff( array1, array2 )</strong></p>
 
-<p>Return the population correlation coefficient of two vectors (Pearson&#39;s Rho).</p>
+<p>Returns the population correlation coefficient of the <code>array1</code> and <code>array2</code> vectors (Pearson&#39;s Rho).</p>
 
 <pre><code>var seq = jStat.seq( 0, 10, 11 );
 jStat.corrcoeff( seq, seq ) === 1;</code></pre>
 
-<p><strong>spearmancoeff( array, array )</strong></p>
+<p><strong>spearmancoeff( array1, array2 )</strong></p>
 
-<p>Return the rank correlation coefficient of two vectors (Spearman&#39;s Rho).</p>
+<p>Returns the rank correlation coefficient of the <code>array1</code> and <code>array2</code> vectors (Spearman&#39;s Rho).</p>
 
 <pre><code>jStat.spearmancoeff([1, 2, 3, 4], [5, 6, 9, 7]) == 0.8;
 jStat.spearmancoeff([1, 2, 2, 4], [5, 2, 5, 7]) == 0.5;</code></pre>
